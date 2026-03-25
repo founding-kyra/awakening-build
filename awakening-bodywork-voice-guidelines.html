@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Stephanie Hupp — Voice Guidelines</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --plum:    #6B4C82;
+    --mauve:   #C4A0B8;
+    --blush:   #D4829A;
+    --lilac:   #E8D5F0;
+    --parch:   #F5EFE6;
+    --gold:    #C9A84C;
+    --sage:    #8FAF8B;
+    --deep:    #2E1E3A;
+    --mid:     #6B5A7A;
+    --soft:    #FAF6F2;
+    --border:  #E0D0EC;
+    --white:   #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--soft);
+    color: var(--deep);
+    padding: 48px 24px 96px;
+    max-width: 960px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    text-align: center;
+    margin-bottom: 56px;
+    padding-bottom: 40px;
+    border-bottom: 1px solid var(--border);
+  }
+  .eyebrow {
+    font-size: 10px;
+    letter-spacing: 3.5px;
+    text-transform: uppercase;
+    color: var(--blush);
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 42px;
+    font-weight: 600;
+    color: var(--deep);
+    line-height: 1.15;
+    margin-bottom: 6px;
+  }
+  .header .sub {
+    font-size: 13px;
+    color: var(--mid);
+    font-style: italic;
+  }
+  .header-rule {
+    width: 48px;
+    height: 2px;
+    background: var(--gold);
+    margin: 20px auto 0;
+    border-radius: 2px;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    margin-bottom: 32px;
+  }
+  .section-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blush);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-label::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--plum);
+    margin-bottom: 6px;
+  }
+  .section-desc {
+    font-size: 13px;
+    color: var(--mid);
+    margin-bottom: 24px;
+    font-style: italic;
+  }
+
+  /* ── GRID ── */
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 14px;
+  }
+  @media (max-width: 700px) {
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+  }
+
+  /* ── CARD ── */
+  .card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 22px;
+    position: relative;
+  }
+  .card-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--plum);
+    margin-bottom: 10px;
+  }
+  .card p, .card li {
+    font-size: 13px;
+    color: var(--deep);
+    line-height: 1.65;
+  }
+  .card ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .card ul li {
+    padding-left: 16px;
+    position: relative;
+  }
+  .card ul li::before {
+    content: '·';
+    position: absolute;
+    left: 4px;
+    color: var(--blush);
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  /* ── QUOTE BLOCK ── */
+  .quote-block {
+    background: var(--lilac);
+    border-left: 3px solid var(--plum);
+    border-radius: 0 10px 10px 0;
+    padding: 18px 22px;
+    margin: 12px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: var(--deep);
+    line-height: 1.55;
+  }
+  .quote-source {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--mid);
+    margin-top: 8px;
+    display: block;
+  }
+
+  /* ── PATTERN CARD ── */
+  .pattern-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+  }
+  .pattern-header {
+    background: var(--plum);
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .pattern-header h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+    color: var(--white);
+    font-weight: 400;
+  }
+  .pattern-icon {
+    font-size: 16px;
+  }
+  .pattern-body {
+    padding: 18px 20px;
+  }
+  .pattern-example {
+    background: var(--parch);
+    border-radius: 8px;
+    padding: 14px 16px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--deep);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .pattern-rule {
+    font-size: 12px;
+    color: var(--mid);
+    line-height: 1.5;
+  }
+
+  /* ── VOCAB TABLE ── */
+  .vocab-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+  .vocab-col {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .vocab-col h3 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .vocab-col.verbs h3 { color: var(--plum); border-color: var(--mauve); }
+  .vocab-col.nouns h3 { color: var(--blush); border-color: var(--blush); }
+  .vocab-col.phrases h3 { color: #7B9A78; border-color: var(--sage); }
+  .vocab-col.avoid h3 { color: #9A5050; border-color: #D0A0A0; }
+
+  .vocab-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+  }
+  .tag {
+    font-size: 12px;
+    padding: 4px 11px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+  .tag-v  { background: #F0E8F8; color: var(--plum); }
+  .tag-n  { background: #FBF0F4; color: var(--blush); }
+  .tag-p  { background: #EEF5ED; color: #4A7A46; }
+  .tag-x  { background: #F8EEED; color: #9A5050; text-decoration: line-through; }
+
+  /* ── DO / DON'T ── */
+  .comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 14px;
+  }
+  .do-side, .dont-side {
+    padding: 18px 20px;
+  }
+  .do-side {
+    background: #F0F7F0;
+    border-right: 1px solid var(--border);
+  }
+  .dont-side {
+    background: #FAF0F0;
+  }
+  .comp-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    display: block;
+  }
+  .comp-label.do { color: #4A7A46; }
+  .comp-label.dont { color: #9A5050; }
+  .comp-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.55;
+    color: var(--deep);
+  }
+
+  /* ── PERSONA BOX ── */
+  .persona-box {
+    background: linear-gradient(135deg, var(--plum) 0%, #4A2E68 100%);
+    border-radius: 16px;
+    padding: 32px 36px;
+    color: var(--white);
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  .persona-box h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: italic;
+    margin-bottom: 12px;
+    color: var(--lilac);
+  }
+  .persona-box p {
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 640px;
+    margin: 0 auto;
+    color: rgba(255,255,255,0.85);
+  }
+  .persona-attrs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .attr-pill {
+    
+    border: 1px solid rgba(255,255,255,0.2);
+    color: var(--lilac);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 20px;
+  }
+
+  /* ── RHYTHM BOX ── */
+  .rhythm-block {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 28px 32px;
+    margin-bottom: 14px;
+  }
+  .rhythm-block h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--plum);
+    margin-bottom: 4px;
+  }
+  .rhythm-block .sub {
+    font-size: 11px;
+    color: var(--mid);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .rhythm-example {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--deep);
+    background: var(--parch);
+    padding: 18px 22px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+  .rhythm-note {
+    font-size: 12px;
+    color: var(--mid);
+    font-style: italic;
+  }
+
+  /* ── COPY FORMULAS ── */
+  .formula {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+  }
+  .formula-name {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--plum);
+    margin-bottom: 6px;
+  }
+  .formula-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    margin-top: 8px;
+  }
+  .step {
+    background: var(--lilac);
+    color: var(--plum);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 12px;
+    border-radius: 6px;
+  }
+  .step-arrow {
+    color: var(--mid);
+    font-size: 12px;
+  }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid var(--border);
+    font-size: 11px;
+    color: var(--mid);
+  }
+
+  
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #6B4C82;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 60px;
+    box-shadow: 0 2px 16px rgba(107,76,130,0.18);
+  }
+  #site-nav .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  #site-nav .nav-logo img {
+    height: 36px;
+    width: auto;
+    
+  }
+  #site-nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  #site-nav .nav-links a {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+  #site-nav .nav-links a:hover,
+  #site-nav .nav-links a.active {
+    color: #C9A84C;
+  }
+  @media (max-width: 640px) {
+    #site-nav { padding: 0 16px; height: auto; min-height: 340px; flex-wrap: wrap; gap: 8px; padding-top: 10px; padding-bottom: 10px; }
+    #site-nav .nav-links { gap: 4px; }
+    #site-nav .nav-links a {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+    #site-nav .nav-logo img { height: 28px; }
+  }
+
+
+  /* ── SITE HEADER ── */
+  #site-header {
+    background: #6B4C82;
+    padding: 36px 24px 52px;
+    min-height: 340px;
+    
+    margin-bottom: 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #site-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 40%, rgba(196,160,184,0.18) 0%, transparent 65%),
+                radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.12) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  #site-header > * { position: relative; }
+  #site-nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    padding-top: 8px;
+  }
+  #site-nav-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  #site-nav-links a:hover,
+  #site-nav-links a.active { color: #C9A84C; }
+  @media (max-width: 600px) {
+    #site-nav-links { gap: 16px; }
+    #site-nav-links a { font-size: 10px; }
+  }
+
+</style>
+</head>
+<body>
+<header id="site-header">
+  <nav id="site-nav-links">
+    <a href="1-index.html">Home</a>
+    <a href="awakening-bodywork-sitemap.html">Sitemap</a>
+    <a href="awakening-bodywork-voice-guidelines.html" class="active">Voice</a>
+    <a href="awakening-bodywork-copy-deck.html">Copy Deck</a>
+    <a href="awakening-bodywork-flowchart.html">Flowchart</a>
+  </nav>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 189.4 72" style="height:166px;width:auto;display:block;margin:0 auto 24px;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_00000094586390388915190850000004824286473988598706_);}
+	.st2{fill:#90B289;}
+	.st3{fill:url(#SVGID_00000135650122613398842990000016008181130434093448_);}
+	.st4{fill:url(#SVGID_00000074441300234155120730000006379697349540598182_);}
+	.st5{fill:url(#SVGID_00000120553643068955262500000013888496911693048495_);}
+	.st6{fill:url(#SVGID_00000073707210156301497780000013501109323318253754_);}
+	.st7{fill:url(#SVGID_00000005959236041976489660000009802236034581265801_);}
+	.st8{fill:url(#SVGID_00000005226924234209137620000002262913672807405712_);}
+	.st9{fill:url(#SVGID_00000134225283858709780680000016847175277447383740_);}
+	.st10{fill:url(#SVGID_00000183957869229667301720000003026737881009194164_);}
+	.st11{fill:url(#SVGID_00000047772498539214354780000003474191062884283028_);}
+	.st12{fill:#FFFFFF;}
+	.st13{fill:url(#SVGID_00000111163307999619765560000000378571641019052165_);}
+	.st14{fill:url(#SVGID_00000134215988225523907900000017906287973748599218_);}
+	.st15{fill:url(#SVGID_00000096756931240193052930000005964727023998766774_);}
+	.st16{fill:url(#SVGID_00000132799660654146341660000013953318051235980947_);}
+	.st17{fill:url(#SVGID_00000045586133308344514580000004581977584323142830_);}
+	.st18{fill:url(#SVGID_00000062891950127563354160000017424302096927815605_);}
+	.st19{fill:url(#SVGID_00000023987696883627750280000013163688036169496500_);}
+	.st20{fill:url(#SVGID_00000025419378579891834290000004144305571707337628_);}
+	.st21{fill:url(#SVGID_00000080168138319080386920000007183354094486398378_);}
+	.st22{fill:url(#SVGID_00000096782165039754015580000017377722284070733997_);}
+</style>
+<g>
+	<g>
+		<g>
+			<radialGradient id="SVGID_1_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path class="st0" d="M30.5,48.5c0.6,1.1,1.6,2.1,2.8,2.3c0.6,0.1,1.3,0.1,1.9,0.2c0.2,0,0.8,0.1,1,0c0.4-0.2,0.6-1.7,0.7-2.1     c0.3-1.4,0.2-2.5-0.7-3.7c-0.3-0.4-2.1-2.5-2.5-1.8c-0.2,0.3,0.6,0.9,0.8,1.2c0.5,0.5,0.9,1.1,1.2,1.8c0.5,1.2,0.1,2.3-0.2,3.5     c-1-0.1-2.1,0-3-0.6c-1-0.7-1.6-1.7-2.1-2.8c-0.1-0.2-0.2-0.4-0.5-0.3c-0.2,0.1-0.1,0.4-0.1,0.7C30,47.4,30.2,48,30.5,48.5z"></path>
+			
+				<radialGradient id="SVGID_00000154407033101711297270000011964349072587357085_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000154407033101711297270000011964349072587357085_);" d="M35.2,29.5c0.1,0.6,1.1-0.1,1.3-0.2     c0.7-0.3,1.4-0.5,2.1-0.6c1.3-0.1,2.2,0.6,3.3,1.2c-0.4,1-0.7,2-1.5,2.7c-1,0.7-2.1,0.9-3.3,1.2c-0.2,0-0.5,0.1-0.4,0.4     c0.1,0.3,0.4,0.3,0.6,0.3c0.6,0,1.2,0,1.8-0.1c1.2-0.2,2.3-0.8,3-1.8c0.3-0.6,0.6-1.3,0.8-1.9c0.1-0.2,0.3-0.6,0.3-0.9     c0-0.2,0.1-0.1,0-0.2c-0.1-0.1-0.3-0.2-0.4-0.3c-0.4-0.3-0.8-0.5-1.2-0.8c-0.6-0.3-1.1-0.7-1.8-0.8c-0.6-0.1-1.3,0-1.9,0.2     c-0.5,0.2-1,0.4-1.5,0.7C36.2,28.5,35.1,29.1,35.2,29.5z"></path>
+			<path class="st2" d="M37.8,32.6c0.5-0.1,1-0.3,1.2-0.7c0.1-0.2,0.2-0.4,0.3-0.6c0-0.1,0.2-0.5,0.2-0.6c0-0.1-0.3-0.2-0.4-0.3     c-0.2-0.1-0.4-0.3-0.6-0.4c-0.5-0.2-1.1-0.1-1.5,0.1c-0.2,0.1-0.8,0.3-0.9,0.6c-0.1,0.3,0.2,0.8,0.3,1c0.1,0.2,0.1,0.8,0.4,1     C37,32.8,37.6,32.7,37.8,32.6z"></path>
+			<path class="st2" d="M36.1,40.1c0.1,0.2,0.7,0.5,0.9,0.5c0.5,0.2,1,0.3,1.5,0.1c0.2-0.1,0.4-0.2,0.6-0.4c0.1-0.1,0.4-0.2,0.4-0.3     c0-0.1-0.2-0.4-0.2-0.5c-0.1-0.2-0.1-0.4-0.3-0.6c-0.3-0.4-0.8-0.6-1.2-0.7c-0.2,0-0.9-0.2-1.1-0.1c-0.3,0.1-0.3,0.7-0.4,1     C36.3,39.3,36,39.8,36.1,40.1z"></path>
+			
+				<radialGradient id="SVGID_00000103254821849259077710000004600973418802015360_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000103254821849259077710000004600973418802015360_);" d="M27.5,23.9c0.2,0,0.3-0.3,0.4-0.5     c0.2-0.5,0.3-1.1,0.4-1.7c0.2-1.3,0-2.6-0.9-3.6c-0.4-0.5-0.9-0.9-1.4-1.2c-0.2-0.2-0.5-0.5-0.8-0.6c-0.2-0.1-0.1-0.1-0.2,0     c-0.1,0-0.3,0.2-0.4,0.3c-0.4,0.3-0.8,0.6-1.2,1c-1,0.9-1.6,1.8-1.6,3.2c0,0.6,0.1,1.2,0.2,1.7c0.1,0.3,0.2,1.3,0.6,1.4     c0.7,0.2,0.3-1.1,0.2-1.3c-0.1-0.7-0.1-1.5,0.1-2.2c0.3-1.3,1.2-1.9,2.2-2.7c0.8,0.7,1.7,1.2,2.1,2.3c0.2,0.6,0.3,1.2,0.3,1.8     c0,0.6-0.2,1.2-0.2,1.8C27.1,23.7,27.2,23.9,27.5,23.9z"></path>
+			<path class="st2" d="M17.3,23.1c-0.2-0.1-0.5,0-0.7,0c-0.1,0-0.4-0.1-0.5,0c-0.1,0.1-0.1,0.4-0.2,0.5c-0.1,0.2-0.1,0.4-0.2,0.7     c0,0.5,0.2,1,0.5,1.3c0.2,0.2,0.6,0.7,0.8,0.7c0.3,0,0.7-0.4,0.9-0.6c0.2-0.2,0.8-0.4,0.8-0.7c0-0.2-0.3-0.8-0.4-1     C18.2,23.6,17.8,23.2,17.3,23.1z"></path>
+			<path class="st2" d="M31.2,45.7c0,0.2,0.3,0.8,0.4,1c0.3,0.4,0.6,0.8,1.1,1c0.2,0.1,0.5,0,0.7,0c0.1,0,0.4,0.1,0.5,0     c0.1-0.1,0.1-0.4,0.2-0.5c0.1-0.2,0.1-0.4,0.2-0.7c0-0.5-0.2-1-0.5-1.3c-0.2-0.2-0.6-0.7-0.8-0.7c-0.3,0-0.7,0.4-0.9,0.6     C31.8,45.2,31.3,45.4,31.2,45.7z"></path>
+			<path class="st2" d="M25.4,20.4c-0.1-0.1-0.3-0.3-0.4-0.3c-0.1,0-0.3,0.3-0.4,0.3c-0.2,0.1-0.4,0.3-0.5,0.4     c-0.3,0.4-0.4,0.9-0.4,1.4c0,0.3,0.1,0.9,0.2,1.1c0.2,0.2,0.8,0,1.1,0.1c0.3,0,0.8,0.1,1.1-0.1c0.2-0.2,0.2-0.8,0.2-1.1     c0-0.5,0-1.1-0.4-1.4C25.8,20.7,25.6,20.5,25.4,20.4z"></path>
+			<path class="st2" d="M32.9,26.3c0.3,0,0.7-0.5,0.8-0.7c0.3-0.4,0.6-0.9,0.6-1.4c0-0.2-0.1-0.4-0.2-0.7c0-0.1-0.1-0.4-0.2-0.5     c-0.1-0.1-0.4,0-0.5,0c-0.2,0-0.5,0-0.7,0c-0.5,0.1-0.9,0.5-1.1,0.9c-0.1,0.2-0.5,0.8-0.4,1c0,0.3,0.6,0.5,0.8,0.7     C32.2,25.9,32.6,26.4,32.9,26.3z"></path>
+			
+				<radialGradient id="SVGID_00000010286669251721514480000001243953501997946753_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000010286669251721514480000001243953501997946753_);" d="M43.3,41.4c0.2-0.4-0.5-1.7-0.7-2.1     c-0.5-1.2-1.2-2.1-2.5-2.5c-0.5-0.2-1.1-0.3-1.6-0.4c-0.3,0-1.5-0.2-1.7,0.2c-0.3,0.5,1,0.5,1.2,0.6c0.7,0.1,1.4,0.4,2.1,0.7     c1.2,0.7,1.5,1.8,1.9,3c-0.9,0.6-1.7,1.2-2.8,1.3c-1.2,0-2.3-0.5-3.3-1c-0.2-0.1-0.4-0.2-0.6,0.1c-0.1,0.3,0.2,0.4,0.3,0.6     c0.5,0.4,1,0.7,1.6,1c1.1,0.5,2.5,0.7,3.6,0.2c0.6-0.3,1.1-0.6,1.7-1C42.6,41.9,43.1,41.6,43.3,41.4z"></path>
+			
+				<radialGradient id="SVGID_00000181067907105024516690000016068262112663943592_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000181067907105024516690000016068262112663943592_);" d="M16.3,27.4c0.2-0.3-0.6-0.9-0.8-1.2     c-0.5-0.5-0.9-1.1-1.2-1.8c-0.5-1.2-0.1-2.3,0.2-3.5c1,0.1,2.1,0,3,0.6c1,0.7,1.6,1.7,2.1,2.8c0.1,0.2,0.2,0.4,0.5,0.3     c0.2-0.1,0.1-0.4,0.1-0.7c-0.2-0.6-0.4-1.2-0.7-1.7c-0.6-1.1-1.6-2.1-2.8-2.3c-0.6-0.1-1.3-0.1-1.9-0.2c-0.2,0-0.8-0.1-1,0     c-0.4,0.2-0.6,1.7-0.7,2.1c-0.3,1.4-0.2,2.5,0.7,3.7C14.1,25.9,15.9,28,16.3,27.4z"></path>
+			<path class="st2" d="M17.1,44.5c-0.3,0-0.7,0.5-0.8,0.7c-0.3,0.4-0.6,0.9-0.6,1.4c0,0.2,0.1,0.4,0.2,0.7c0,0.1,0.1,0.4,0.2,0.5     c0.1,0.1,0.4,0,0.5,0c0.2,0,0.5,0,0.7,0c0.5-0.1,0.9-0.5,1.1-0.9c0.1-0.2,0.5-0.8,0.4-1c0-0.3-0.6-0.5-0.8-0.7     C17.8,44.9,17.4,44.4,17.1,44.5z"></path>
+			<path class="st2" d="M13.3,38.1c-0.2-0.1-0.8,0-1,0.1c-0.5,0.1-1,0.3-1.2,0.7c-0.1,0.2-0.2,0.4-0.3,0.6c0,0.1-0.2,0.5-0.2,0.6     c0,0.1,0.3,0.2,0.4,0.3c0.2,0.1,0.4,0.3,0.6,0.4c0.5,0.2,1.1,0.1,1.5-0.1c0.2-0.1,0.8-0.3,0.9-0.6c0.1-0.3-0.2-0.8-0.3-1     C13.5,38.8,13.5,38.2,13.3,38.1z"></path>
+			
+				<radialGradient id="SVGID_00000050664276859671331330000001672516915397852304_" cx="25.0237" cy="35.4018" r="22.086" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1423" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4389" style="stop-color:#F7B222"></stop>
+				<stop offset="0.861" style="stop-color:#F27428"></stop>
+				<stop offset="1" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000050664276859671331330000001672516915397852304_);" d="M34.7,36.2c0.3-4.1-1.9-7.9-5.6-9.6     c-4.2-1.9-9.4-0.6-12,3.2c-2.3,3.3-2.3,7.9,0,11.2c2.3,3.3,6.6,4.9,10.5,3.8C31.5,43.7,34.4,40.2,34.7,36.2z"></path>
+			
+				<radialGradient id="SVGID_00000101091754660425013560000002410968221635143306_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000101091754660425013560000002410968221635143306_);" d="M22.6,46.9c-0.2,0-0.3,0.3-0.4,0.5     c-0.2,0.5-0.3,1.1-0.4,1.7c-0.2,1.3,0,2.6,0.9,3.6c0.4,0.5,0.9,0.9,1.4,1.2c0.2,0.2,0.5,0.5,0.8,0.6c0.2,0.1,0.1,0.1,0.2,0     c0.1,0,0.3-0.2,0.4-0.3c0.4-0.3,0.8-0.6,1.2-1c1-0.9,1.6-1.8,1.6-3.2c0-0.6-0.1-1.2-0.2-1.7c-0.1-0.3-0.2-1.3-0.6-1.4     c-0.7-0.2-0.3,1.1-0.2,1.3c0.1,0.7,0.1,1.5-0.1,2.2c-0.3,1.3-1.2,1.9-2.2,2.7c-0.8-0.7-1.7-1.2-2.1-2.3c-0.2-0.6-0.3-1.2-0.3-1.8     c0-0.6,0.2-1.2,0.2-1.8C22.9,47.1,22.8,46.9,22.6,46.9z"></path>
+			<path class="st2" d="M24.6,50.4c0.1,0.1,0.3,0.3,0.4,0.3c0.1,0,0.3-0.3,0.4-0.3c0.2-0.1,0.4-0.3,0.5-0.4c0.3-0.4,0.4-0.9,0.4-1.4     c0-0.3-0.1-0.9-0.2-1.1c-0.2-0.2-0.8,0-1.1-0.1c-0.3,0-0.8-0.1-1.1,0.1c-0.2,0.2-0.2,0.8-0.2,1.1c0,0.5,0,1.1,0.4,1.4     C24.2,50.1,24.4,50.3,24.6,50.4z"></path>
+			
+				<radialGradient id="SVGID_00000042730273367449011360000003552282039440994448_" cx="23.7118" cy="32.7717" r="40.5613" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000042730273367449011360000003552282039440994448_);" d="M14.5,41.2c-0.1-0.5-1,0.1-1.2,0.2     c-0.6,0.3-1.3,0.5-1.9,0.6c-1.2,0.1-2.1-0.5-3.1-1.2c0.4-0.9,0.6-1.9,1.4-2.5c0.9-0.7,2-0.9,3.1-1.1c0.2,0,0.4-0.1,0.4-0.4     c-0.1-0.3-0.4-0.2-0.6-0.2c-0.6,0-1.1,0-1.7,0.1C9.7,37,8.6,37.5,8,38.5c-0.3,0.5-0.5,1.2-0.8,1.7C7.2,40.5,7,40.8,7,41.1     c0,0.2-0.1,0.1,0,0.2c0.1,0.1,0.3,0.2,0.3,0.3c0.3,0.3,0.7,0.5,1.1,0.7c0.5,0.3,1,0.6,1.7,0.8c0.6,0.1,1.2,0,1.8-0.1     c0.5-0.1,1-0.4,1.4-0.6C13.6,42.1,14.5,41.6,14.5,41.2z"></path>
+			<path class="st2" d="M13.9,30.7c-0.1-0.2-0.7-0.5-0.9-0.5c-0.5-0.2-1-0.3-1.5-0.1c-0.2,0.1-0.4,0.2-0.6,0.4     c-0.1,0.1-0.4,0.2-0.4,0.3c0,0.1,0.2,0.4,0.2,0.5c0.1,0.2,0.1,0.4,0.3,0.6c0.3,0.4,0.8,0.6,1.2,0.7c0.2,0,0.9,0.2,1.1,0.1     c0.3-0.1,0.3-0.7,0.4-1C13.7,31.5,14,31,13.9,30.7z"></path>
+			
+				<radialGradient id="SVGID_00000137833241498452922580000000135044596888573076_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000137833241498452922580000000135044596888573076_);" d="M6.8,29.4c-0.2,0.4,0.5,1.7,0.7,2.1     C8,32.7,8.7,33.5,10,34c0.5,0.2,1.1,0.3,1.6,0.4c0.3,0,1.5,0.2,1.7-0.2c0.3-0.5-1-0.5-1.2-0.6c-0.7-0.1-1.4-0.4-2.1-0.7     c-1.2-0.7-1.5-1.8-1.9-3c0.9-0.6,1.7-1.2,2.8-1.3c1.2,0,2.3,0.5,3.3,1c0.2,0.1,0.4,0.2,0.6-0.1c0.1-0.3-0.2-0.4-0.3-0.6     c-0.5-0.4-1-0.7-1.6-1c-1.1-0.5-2.5-0.7-3.6-0.2c-0.6,0.3-1.1,0.6-1.7,1C7.4,28.9,6.9,29.2,6.8,29.4z"></path>
+			
+				<radialGradient id="SVGID_00000055688872149246969780000008324023394983429781_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000055688872149246969780000008324023394983429781_);" d="M19,49.3c0.3-0.4,0.6-0.9,0.8-1.4     c0.1-0.3,0.7-1.3,0.3-1.6c-0.4-0.4-0.8,0.8-0.9,1c-0.4,0.6-0.8,1.2-1.3,1.7c-1,0.9-2.1,0.8-3.4,0.9c-0.3-1-0.7-2-0.3-3.1     c0.3-1.1,1.1-2,1.9-2.8c0.2-0.1,0.3-0.3,0.2-0.5c-0.1-0.3-0.4-0.2-0.6-0.1c-0.5,0.3-1,0.7-1.4,1.1c-0.8,0.9-1.5,2.1-1.4,3.3     c0.1,0.7,0.3,1.4,0.4,2c0.1,0.3,0.1,0.7,0.3,0.9c0.1,0.2,0,0.1,0.1,0.2c0.1,0,0.3,0,0.5,0c0.5,0,0.9,0,1.4-0.1     c0.7-0.1,1.3-0.1,1.9-0.4C18.1,50.2,18.6,49.8,19,49.3z"></path>
+			
+				<radialGradient id="SVGID_00000049910217020301763810000002273115901448986790_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000049910217020301763810000002273115901448986790_);" d="M31,21.5c-0.3,0.4-0.6,0.9-0.8,1.4     c-0.1,0.3-0.7,1.3-0.3,1.6c0.4,0.4,0.8-0.8,0.9-1c0.4-0.6,0.8-1.2,1.3-1.7c1-0.9,2.1-0.8,3.4-0.9c0.3,1,0.7,2,0.3,3.1     c-0.3,1.1-1.1,2-1.9,2.8c-0.2,0.1-0.3,0.3-0.2,0.5c0.1,0.3,0.4,0.2,0.6,0.1c0.5-0.3,1-0.7,1.4-1.1c0.8-0.9,1.5-2.1,1.4-3.3     c-0.1-0.7-0.3-1.4-0.4-2c-0.1-0.3-0.1-0.7-0.3-0.9c-0.1-0.2,0-0.1-0.1-0.2c-0.1,0-0.3,0-0.5,0c-0.5,0-0.9,0-1.4,0.1     c-0.7,0.1-1.3,0.1-1.9,0.4C31.9,20.6,31.4,21,31,21.5z"></path>
+			<g>
+				<path class="st12" d="M39.2,46.1c0.3,0.3,0.7,0.5,1,0.8c0.3,0.2,0.5,0.4,0.8,0.6c0.2,0.2,0.6,0.5,0.9,0.2      c0.2-0.3-0.2-0.6-0.5-0.8c-0.2-0.2-0.5-0.4-0.8-0.6c-0.4-0.3-0.7-0.5-1.1-0.7c-0.2-0.1-0.5-0.3-0.7-0.1      C38.7,45.7,39,45.9,39.2,46.1z"></path>
+				
+					<radialGradient id="SVGID_00000106117456816385300800000000345549073826277048_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000106117456816385300800000000345549073826277048_);" d="M45,44c0.5-0.3,0.9-0.6,1.4-0.9      c0.2-0.1,0.6-0.3,0.7-0.5c0.1-0.2,0-0.4-0.1-0.6c-0.2-0.5-0.3-0.9-0.5-1.4c-0.3-1-0.6-1.9-1.5-2.5c-0.3-0.2-2.2-1.3-2.1-0.3      c0,0.2,0.1,0.2,0.3,0.3c0.2,0.1,0.4,0.2,0.5,0.3c0.4,0.3,0.8,0.7,1,1.1c0.1,0.3,0.2,0.6,0.3,0.9c0.1,0.3,0.2,0.5,0.2,0.8      c0.1,0.2,0.2,0.6,0.2,0.7c-0.1,0.2-0.3,0.3-0.5,0.4c-0.2,0.2-0.4,0.3-0.6,0.4c-0.2,0.2-0.5,0.4-0.8,0.5      c-0.4,0.2-0.8,0.4-1.2,0.4c-0.4,0-0.8,0-1.2-0.1c-0.4,0-0.5,0.5-0.2,0.7c0.4,0.2,0.8,0.3,1.3,0.4C43.3,44.9,44.2,44.6,45,44z"></path>
+				<path class="st12" d="M41.7,23c-0.3,0.2-0.5,0.4-0.8,0.6c-0.3,0.3-0.7,0.5-1,0.8c-0.2,0.1-0.5,0.3-0.3,0.6      c0.2,0.2,0.5,0,0.7-0.1c0.4-0.2,0.7-0.5,1.1-0.7c0.3-0.2,0.5-0.4,0.8-0.6c0.2-0.2,0.6-0.4,0.5-0.8C42.3,22.5,41.9,22.8,41.7,23z      "></path>
+				<path class="st12" d="M44.9,35.1c-0.4,0-0.8,0-1.3,0c-0.2,0-0.5,0-0.5,0.3c0,0.3,0.3,0.3,0.5,0.3c0.4,0,0.8,0,1.3,0      c0.3,0,0.7,0,1.1,0c0.3,0,0.8,0,0.8-0.3c-0.1-0.4-0.5-0.3-0.8-0.3C45.6,35.1,45.3,35.1,44.9,35.1z"></path>
+				
+					<radialGradient id="SVGID_00000160153118150285972510000013143573701412273597_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000160153118150285972510000013143573701412273597_);" d="M43,26c-0.5,0-0.9,0-1.4,0.2      c-0.3,0.1-0.9,0.3-0.8,0.7c0.2,0.4,0.7,0.2,1.1,0.2c0.5,0,1.1,0.1,1.6,0.3c0.3,0.1,0.6,0.3,0.8,0.5c0.2,0.2,0.4,0.3,0.6,0.5      c0.2,0.1,0.5,0.3,0.6,0.5c0.1,0.2-0.1,0.4-0.1,0.6c-0.1,0.2-0.1,0.5-0.2,0.7c-0.1,0.3-0.2,0.6-0.3,0.9c-0.3,0.8-1,1.4-1.7,1.7      c-0.1,0.1-0.2,0.1-0.2,0.2c0,0.2,0.1,0.4,0.3,0.5c0.2,0,0.4-0.1,0.5-0.1c0.2-0.1,0.5-0.1,0.7-0.3c0.9-0.4,1.5-1.2,1.8-2.1      c0.2-0.5,0.4-1,0.5-1.6c0.1-0.3,0.3-0.7,0.4-1c0.1-0.2-0.1-0.3-0.3-0.4c-0.4-0.2-0.8-0.5-1.1-0.8C44.8,26.7,44.1,26.1,43,26z"></path>
+				<path class="st12" d="M7.5,22.2c-0.2-0.2-0.6-0.5-0.9-0.2c-0.2,0.3,0.2,0.6,0.5,0.8c0.2,0.2,0.5,0.4,0.8,0.6      c0.4,0.3,0.7,0.5,1.1,0.7c0.2,0.1,0.5,0.3,0.7,0.1c0.2-0.2-0.1-0.5-0.3-0.6"></path>
+				<path class="st12" d="M4.5,35.5c-0.3,0-0.7,0-1.1,0c-0.3,0-0.8,0-0.8,0.3c0.1,0.4,0.5,0.3,0.8,0.3c0.3,0,0.7,0,1.1,0      c0.4,0,0.8,0,1.3,0c0.2,0,0.5,0,0.5-0.3c0-0.3-0.3-0.3-0.5-0.3C5.3,35.5,4.9,35.5,4.5,35.5z"></path>
+				<path class="st12" d="M8.6,47.8c0.3-0.2,0.5-0.4,0.8-0.6c0.3-0.3,0.7-0.5,1-0.8c0.2-0.1,0.5-0.3,0.3-0.6c-0.2-0.2-0.5,0-0.7,0.1      c-0.4,0.2-0.7,0.5-1.1,0.7c-0.3,0.2-0.5,0.4-0.8,0.6c-0.2,0.2-0.6,0.4-0.5,0.8C8,48.3,8.3,48,8.6,47.8z"></path>
+				
+					<radialGradient id="SVGID_00000080899195914306108990000010862581822994219450_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000080899195914306108990000010862581822994219450_);" d="M7,44.8c0.5,0,0.9,0,1.4-0.2      c0.3-0.1,0.9-0.3,0.8-0.7c-0.2-0.4-0.7-0.2-1.1-0.2c-0.5,0-1.1-0.1-1.6-0.3c-0.3-0.1-0.6-0.3-0.8-0.5c-0.2-0.2-0.4-0.3-0.6-0.5      c-0.2-0.1-0.5-0.3-0.6-0.5c-0.1-0.2,0.1-0.4,0.1-0.6c0.1-0.2,0.1-0.5,0.2-0.7c0.1-0.3,0.2-0.6,0.3-0.9c0.3-0.8,1-1.4,1.7-1.7      C7,38,7.1,38,7.1,37.8c0-0.2-0.1-0.4-0.3-0.5c-0.2,0-0.4,0.1-0.5,0.1c-0.2,0.1-0.5,0.1-0.7,0.3c-0.9,0.4-1.5,1.2-1.8,2.1      c-0.2,0.5-0.4,1-0.5,1.6c-0.1,0.3-0.3,0.7-0.4,1c-0.1,0.2,0.1,0.3,0.3,0.4c0.4,0.2,0.8,0.5,1.1,0.8C5.2,44.1,5.9,44.7,7,44.8z"></path>
+				
+					<radialGradient id="SVGID_00000112621452608806157500000004068854807312278420_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000112621452608806157500000004068854807312278420_);" d="M5,26.8c-0.5,0.3-0.9,0.6-1.4,0.9      c-0.2,0.1-0.6,0.3-0.7,0.5c-0.1,0.2,0,0.4,0.1,0.6c0.2,0.5,0.3,0.9,0.5,1.4c0.3,1,0.6,1.9,1.5,2.5C5.3,33,7.2,34,7.1,33      c0-0.2-0.1-0.2-0.3-0.3c-0.2-0.1-0.4-0.2-0.5-0.3c-0.4-0.3-0.8-0.7-1-1.1C5.1,31,5,30.7,4.9,30.3c-0.1-0.3-0.2-0.5-0.2-0.8      c-0.1-0.2-0.2-0.6-0.2-0.7c0.1-0.2,0.3-0.3,0.5-0.4c0.2-0.2,0.4-0.3,0.6-0.4c0.2-0.2,0.5-0.4,0.8-0.5c0.4-0.2,0.8-0.4,1.2-0.4      c0.4,0,0.8,0,1.2,0.1c0.4,0,0.5-0.5,0.2-0.7C8.6,26.2,8.2,26,7.7,26C6.7,25.9,5.8,26.2,5,26.8z"></path>
+				<path class="st12" d="M19.3,52.4c-0.3-0.1-0.4,0.1-0.5,0.4c-0.2,0.4-0.3,0.8-0.4,1.2c-0.1,0.3-0.2,0.6-0.3,0.9      c-0.1,0.3-0.3,0.8,0.1,1c0.4,0.1,0.5-0.4,0.6-0.7c0.1-0.3,0.2-0.6,0.3-0.9c0.1-0.4,0.3-0.8,0.4-1.2      C19.5,52.9,19.6,52.5,19.3,52.4z"></path>
+				
+					<radialGradient id="SVGID_00000032642668326999211230000008604416885578212762_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000032642668326999211230000008604416885578212762_);" d="M28.2,53.3c-0.3,0.1-0.3,0.7-0.4,1      c-0.1,0.5-0.4,1-0.8,1.4c-0.2,0.2-0.5,0.4-0.8,0.6c-0.2,0.2-0.4,0.3-0.7,0.5c-0.2,0.1-0.5,0.4-0.7,0.4c-0.2,0-0.4-0.2-0.5-0.3      c-0.2-0.1-0.4-0.3-0.6-0.4c-0.3-0.2-0.5-0.4-0.7-0.6c-0.7-0.5-1-1.3-1.1-2.2c0-0.2,0-0.2-0.2-0.3c-0.2-0.1-0.4,0-0.5,0.2      c-0.2,0.4-0.1,0.9,0,1.3c0.2,1,0.7,1.8,1.5,2.4c0.5,0.3,0.9,0.7,1.4,1c0.2,0.2,0.5,0.4,0.7,0.6c0.2,0.1,0.4-0.1,0.5-0.2      c0.4-0.3,0.8-0.6,1.2-0.9c0.8-0.6,1.6-1.2,2-2.2C28.7,55,29.1,53,28.2,53.3z"></path>
+				
+					<radialGradient id="SVGID_00000075128332174997572410000016835427581692176050_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000075128332174997572410000016835427581692176050_);" d="M16.4,53.4c0.3-0.2,1.9-1.7,0.9-1.9      c-0.2,0-0.3,0.1-0.4,0.2c-0.1,0.2-0.3,0.3-0.5,0.4c-0.4,0.3-0.9,0.5-1.4,0.6c-0.3,0-0.7,0-1,0c-0.3,0-0.5,0-0.8,0      c-0.2,0-0.6,0-0.8-0.1c-0.1-0.1-0.2-0.4-0.3-0.6c-0.1-0.2-0.2-0.5-0.2-0.7c-0.1-0.3-0.2-0.6-0.3-0.9c-0.1-0.5-0.1-0.9,0-1.4      c0.1-0.4,0.3-0.8,0.5-1.1c0.1-0.3-0.3-0.6-0.6-0.4c-0.3,0.3-0.6,0.7-0.8,1.1c-0.5,1-0.4,1.9-0.1,2.9c0.2,0.5,0.3,1.1,0.5,1.6      c0.1,0.2,0.1,0.6,0.2,0.8c0.1,0.2,0.4,0.1,0.6,0.1c0.5,0,1,0,1.5,0C14.5,54,15.5,54,16.4,53.4z"></path>
+				
+					<radialGradient id="SVGID_00000003098802169846941500000007961247846503570820_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000003098802169846941500000007961247846503570820_);" d="M39.5,49.4c-0.1-0.5-0.3-0.9-0.6-1.3      c-0.2-0.3-0.5-0.8-0.9-0.5c-0.4,0.3,0,0.7,0.2,1c0.2,0.5,0.3,1.1,0.2,1.6c-0.1,0.3-0.2,0.7-0.3,1c-0.1,0.2-0.2,0.5-0.2,0.7      c-0.1,0.2-0.1,0.6-0.3,0.7c-0.1,0.1-0.5,0.1-0.6,0.1c-0.2,0-0.5,0-0.7,0c-0.3,0-0.6,0-0.9,0c-0.9-0.1-1.6-0.5-2.2-1.1      c-0.1-0.1-0.1-0.2-0.3-0.1c-0.2,0-0.4,0.2-0.4,0.4c0,0.4,0.5,0.8,0.7,1.1c0.7,0.7,1.6,1.1,2.6,1.1c0.6,0,1.1,0,1.7,0      c0.3,0,0.7,0.1,1,0.1c0.3,0,0.3-0.2,0.3-0.4c0.1-0.4,0.2-0.8,0.3-1.2C39.3,51.5,39.7,50.5,39.5,49.4z"></path>
+				<path class="st12" d="M31.2,54c-0.1-0.4-0.3-0.8-0.4-1.2c-0.1-0.2-0.2-0.5-0.5-0.4c-0.2,0.1-0.1,0.4-0.1,0.6      c0.1,0.4,0.2,0.8,0.4,1.2c0.1,0.3,0.2,0.6,0.3,0.9c0.1,0.3,0.2,0.7,0.6,0.7c0.3-0.2,0.1-0.7,0.1-1C31.4,54.6,31.3,54.3,31.2,54z      "></path>
+				
+					<radialGradient id="SVGID_00000176028892245334118690000001041051165280644790_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000176028892245334118690000001041051165280644790_);" d="M21.8,17.5c0.3-0.1,0.3-0.7,0.4-1      c0.1-0.5,0.4-1,0.8-1.4c0.2-0.2,0.5-0.4,0.8-0.6c0.2-0.2,0.4-0.3,0.7-0.5c0.2-0.1,0.5-0.4,0.7-0.4c0.2,0,0.4,0.2,0.5,0.3      c0.2,0.1,0.4,0.3,0.6,0.4c0.3,0.2,0.5,0.4,0.7,0.6c0.7,0.5,1,1.3,1.1,2.2c0,0.2,0,0.2,0.2,0.3c0.2,0.1,0.4,0,0.5-0.2      c0.2-0.4,0.1-0.9,0-1.3c-0.2-1-0.7-1.8-1.5-2.4c-0.5-0.3-0.9-0.7-1.4-1c-0.2-0.2-0.5-0.4-0.7-0.6c-0.2-0.1-0.4,0.1-0.5,0.2      c-0.4,0.3-0.8,0.6-1.2,0.9c-0.8,0.6-1.6,1.2-2,2.2C21.3,15.7,20.9,17.8,21.8,17.5z"></path>
+				<path class="st12" d="M30.6,17.8c0.3,0.1,0.4-0.1,0.5-0.4c0.2-0.4,0.3-0.8,0.4-1.2c0.1-0.3,0.2-0.6,0.3-0.9      c0.1-0.3,0.3-0.8-0.1-1c-0.4-0.1-0.5,0.4-0.6,0.7c-0.1,0.3-0.2,0.6-0.3,0.9c-0.1,0.4-0.3,0.8-0.4,1.2      C30.5,17.3,30.4,17.6,30.6,17.8z"></path>
+				
+					<radialGradient id="SVGID_00000009554342157848560850000012409163559322370735_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000009554342157848560850000012409163559322370735_);" d="M33.6,17.4c-0.3,0.2-1.9,1.7-0.9,1.9      c0.2,0,0.3-0.1,0.4-0.2c0.1-0.2,0.3-0.3,0.5-0.4c0.4-0.3,0.9-0.5,1.4-0.6c0.3,0,0.7,0,1,0c0.3,0,0.5,0,0.8,0      c0.2,0,0.6,0,0.8,0.1c0.1,0.1,0.2,0.4,0.3,0.6c0.1,0.2,0.2,0.5,0.2,0.7c0.1,0.3,0.2,0.6,0.3,0.9c0.1,0.5,0.1,0.9,0,1.4      c-0.1,0.4-0.3,0.8-0.5,1.1c-0.1,0.3,0.3,0.6,0.6,0.4c0.3-0.3,0.6-0.7,0.8-1.1c0.5-1,0.4-1.9,0.1-2.9c-0.2-0.5-0.3-1.1-0.5-1.6      c-0.1-0.2-0.1-0.6-0.2-0.8c-0.1-0.2-0.4-0.1-0.6-0.1c-0.5,0-1,0-1.5,0C35.5,16.7,34.5,16.7,33.6,17.4z"></path>
+				<path class="st12" d="M18.4,16.5c0.1,0.4,0.3,0.8,0.4,1.2c0.1,0.2,0.2,0.5,0.5,0.4c0.2-0.1,0.1-0.4,0.1-0.6      c-0.1-0.4-0.2-0.8-0.4-1.2c-0.1-0.3-0.2-0.6-0.3-0.9c-0.1-0.3-0.2-0.7-0.6-0.7c-0.3,0.2-0.1,0.7-0.1,1      C18.2,15.9,18.3,16.2,18.4,16.5z"></path>
+				
+					<radialGradient id="SVGID_00000170268472078675604130000000675364508828109696_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000170268472078675604130000000675364508828109696_);" d="M10.5,21.4c0.1,0.5,0.3,0.9,0.6,1.3      c0.2,0.3,0.5,0.8,0.9,0.5c0.4-0.3,0-0.7-0.2-1c-0.2-0.5-0.3-1.1-0.2-1.6c0.1-0.3,0.2-0.7,0.3-1c0.1-0.2,0.2-0.5,0.2-0.7      c0.1-0.2,0.1-0.6,0.3-0.7C12.6,18,13,18,13.1,18c0.2,0,0.5,0,0.7,0c0.3,0,0.6,0,0.9,0c0.9,0.1,1.6,0.5,2.2,1.1      c0.1,0.1,0.1,0.2,0.3,0.1c0.2,0,0.4-0.2,0.4-0.4c0-0.4-0.5-0.8-0.7-1.1c-0.7-0.7-1.6-1.1-2.6-1.1c-0.6,0-1.1,0-1.7,0      c-0.3,0-0.7-0.1-1-0.1c-0.3,0-0.3,0.2-0.3,0.4c-0.1,0.4-0.2,0.8-0.3,1.2C10.7,19.3,10.3,20.3,10.5,21.4z"></path>
+			</g>
+		</g>
+		<path class="st12" d="M32.8,33.8c0-0.7-0.3-0.3-0.3-0.7c0.3,5.1-6.4,11.4-11.2,6.1c-3.6-4,0.5-10.5,5.4-7.7c1.5,0.9,1.9,3,0.9,4.4    c0,0,0,0.1,0,0C26.9,37,25,37.1,24,36.1c-1.3-1.3,0.2-3.8,1.9-2.9c0.9,0.4,1.1,1.5,0.6,2.2c0.1,0.6,0.7-0.5,0.7-0.8    c0.3-2.2-2.7-3.4-4.3-1.7c-1.4,1.3-1.3,3.8,0.2,5c4.5,3.6,9.6-2.3,6.7-6.9c-2.2-3.5-7.3-3.5-10.3-0.3c-2.9,3.1-2,8.5,1.4,10.8    C26.3,45,33.2,40.4,32.8,33.8z"></path>
+	</g>
+	<g>
+		<g>
+			<path class="st2" d="M103.1,47.2h2.4c0.6,0,1.2,0.2,1.5,0.5c0.2,0.2,0.4,0.5,0.4,0.9v0c0,0.7-0.5,1.1-0.9,1.3     c0.7,0.2,1.2,0.6,1.2,1.4v0c0,1-0.8,1.5-2.1,1.5h-2.5V47.2z M105.4,49.7c0.8,0,1.3-0.3,1.3-1v0c0-0.6-0.4-0.9-1.3-0.9h-1.7v1.9     H105.4z M105.6,52.3c0.9,0,1.4-0.4,1.4-1v0c0-0.6-0.5-1-1.5-1h-1.8v2H105.6z"></path>
+			<path class="st2" d="M108.2,50.8L108.2,50.8c0-1.2,0.9-2.2,2.2-2.2c1.3,0,2.2,1,2.2,2.2v0c0,1.2-0.9,2.2-2.2,2.2     C109.1,52.9,108.2,52,108.2,50.8z M112,50.8L112,50.8c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.5,0.7-1.5,1.6v0c0,0.9,0.7,1.6,1.5,1.6     C111.3,52.4,112,51.7,112,50.8z"></path>
+			<path class="st2" d="M113.2,50.8L113.2,50.8c0-1.4,1-2.2,2-2.2c0.8,0,1.3,0.4,1.6,0.9v-2.5h0.6v5.9h-0.6V52     c-0.3,0.5-0.8,0.9-1.6,0.9C114.1,52.9,113.2,52.1,113.2,50.8z M116.8,50.8L116.8,50.8c0-1-0.7-1.6-1.5-1.6     c-0.8,0-1.5,0.6-1.5,1.6v0c0,1,0.7,1.6,1.5,1.6C116,52.4,116.8,51.7,116.8,50.8z"></path>
+			<path class="st2" d="M118.2,54l0.2-0.5c0.2,0.1,0.4,0.2,0.7,0.2c0.4,0,0.6-0.2,0.9-0.8l-1.9-4.2h0.7l1.5,3.5l1.3-3.5h0.7     l-1.8,4.3c-0.4,0.9-0.8,1.2-1.4,1.2C118.7,54.2,118.5,54.1,118.2,54z"></path>
+			<path class="st2" d="M122.5,48.7h0.7l1.1,3.4l1.1-3.4h0.5L127,52l1.1-3.4h0.6l-1.5,4.2h-0.5l-1.1-3.3l-1.1,3.3h-0.5L122.5,48.7z"></path>
+			<path class="st2" d="M129,50.8L129,50.8c0-1.2,0.9-2.2,2.2-2.2c1.3,0,2.2,1,2.2,2.2v0c0,1.2-0.9,2.2-2.2,2.2     C129.9,52.9,129,52,129,50.8z M132.7,50.8L132.7,50.8c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.5,0.7-1.5,1.6v0c0,0.9,0.7,1.6,1.5,1.6     C132.1,52.4,132.7,51.7,132.7,50.8z"></path>
+			<path class="st2" d="M134.1,48.7h0.6v1.1c0.3-0.7,0.9-1.2,1.7-1.2v0.7h0c-0.9,0-1.7,0.7-1.7,1.9v1.7h-0.6V48.7z"></path>
+			<path class="st2" d="M137.1,46.9h0.6V51l2.3-2.4h0.8l-1.8,1.8l1.8,2.4h-0.7l-1.5-1.9l-0.8,0.9v1.1h-0.6V46.9z"></path>
+			<path class="st2" d="M143.7,49.2h-0.6v-0.5h0.6v-0.4c0-0.5,0.1-0.8,0.4-1.1c0.2-0.2,0.5-0.3,0.9-0.3c0.3,0,0.5,0,0.7,0.1v0.5     c-0.2-0.1-0.4-0.1-0.6-0.1c-0.5,0-0.7,0.3-0.7,0.9v0.3h1.3v0.5h-1.3v3.6h-0.6V49.2z"></path>
+			<path class="st2" d="M145.8,50.8L145.8,50.8c0-1.2,0.9-2.2,2.2-2.2c1.3,0,2.2,1,2.2,2.2v0c0,1.2-0.9,2.2-2.2,2.2     C146.7,52.9,145.8,52,145.8,50.8z M149.5,50.8L149.5,50.8c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.5,0.7-1.5,1.6v0c0,0.9,0.7,1.6,1.5,1.6     C148.9,52.4,149.5,51.7,149.5,50.8z"></path>
+			<path class="st2" d="M150.9,48.7h0.6v1.1c0.3-0.7,0.9-1.2,1.7-1.2v0.7h0c-0.9,0-1.7,0.7-1.7,1.9v1.7h-0.6V48.7z"></path>
+			<path class="st2" d="M155.7,47.2h0.7l1.6,4.7l1.6-4.7h0.5l1.6,4.7l1.6-4.7h0.7l-2,5.7h-0.5l-1.6-4.6l-1.6,4.6h-0.5L155.7,47.2z"></path>
+			<path class="st2" d="M163.8,50.8L163.8,50.8c0-1.2,0.9-2.2,2.2-2.2c1.3,0,2.2,1,2.2,2.2v0c0,1.2-0.9,2.2-2.2,2.2     C164.7,52.9,163.8,52,163.8,50.8z M167.6,50.8L167.6,50.8c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.5,0.7-1.5,1.6v0c0,0.9,0.7,1.6,1.5,1.6     C166.9,52.4,167.6,51.7,167.6,50.8z"></path>
+			<path class="st2" d="M169,48.7h0.6v0.7c0.3-0.4,0.6-0.8,1.4-0.8c0.7,0,1.1,0.4,1.3,0.8c0.3-0.5,0.7-0.8,1.5-0.8     c1,0,1.6,0.6,1.6,1.7v2.6h-0.6v-2.4c0-0.8-0.4-1.3-1.1-1.3c-0.6,0-1.2,0.5-1.2,1.3v2.4h-0.6v-2.5c0-0.8-0.4-1.2-1.1-1.2     c-0.7,0-1.2,0.5-1.2,1.3v2.4H169V48.7z"></path>
+			<path class="st2" d="M178.2,52.4c0.6,0,1-0.2,1.3-0.6l0.4,0.3c-0.4,0.5-0.9,0.8-1.7,0.8c-1.1,0-2.1-0.9-2.1-2.2     c0-1.2,0.8-2.2,2-2.2c1.2,0,1.9,1,1.9,2.2c0,0.1,0,0.1,0,0.2h-3.3C176.8,51.9,177.5,52.4,178.2,52.4z M179.4,50.5     c-0.1-0.8-0.5-1.4-1.3-1.4c-0.7,0-1.3,0.6-1.4,1.4H179.4z"></path>
+			<path class="st2" d="M180.8,48.7h0.6v0.7c0.3-0.5,0.7-0.8,1.4-0.8c1,0,1.6,0.7,1.6,1.7v2.6h-0.6v-2.4c0-0.8-0.4-1.3-1.2-1.3     c-0.7,0-1.3,0.5-1.3,1.3v2.4h-0.6V48.7z"></path>
+		</g>
+	</g>
+	<g>
+		<path class="st12" d="M67.1,43.9c0,0.1,0,0.1-0.1,0.2c0,0-0.1,0.1-0.2,0.1h-1.6c-0.1,0-0.2-0.1-0.2-0.2c0-0.7,0-3.2-0.3-6.2    c0-0.1-0.1-0.2-0.2-0.2h-7.2c-0.1,0-0.2,0.1-0.2,0.2c-0.2,3-0.2,5.4-0.3,6.2c0,0.1-0.1,0.2-0.2,0.2H55c-0.1,0-0.1,0-0.2-0.1    c0,0-0.1-0.1-0.1-0.2c0-3.5,0.2-7,0.6-10.4c0.9-7.8,2.7-11.4,5.5-11.4c2.8,0,4.6,3.6,5.5,11.4C66.8,37,67,40.4,67.1,43.9z     M64.4,35.4c0,0,0.1-0.1,0.1-0.2c0-0.5-0.1-1-0.2-1.4c-1.1-9.1-3.1-9.6-3.4-9.6c-0.4,0-2.3,0.5-3.4,9.6c-0.1,0.5-0.1,1-0.2,1.4    c0,0.1,0,0.1,0.1,0.2c0,0,0.1,0.1,0.2,0.1h6.7C64.3,35.4,64.4,35.4,64.4,35.4z"></path>
+		<path class="st12" d="M92.3,22.4c0.1,0.1,0.1,0.2,0.1,0.4L85.5,44c-0.1,0.2-0.2,0.3-0.4,0.3h-1.3c-0.2,0-0.3-0.1-0.4-0.3l-0.1-0.2    h0l0,0l-3.3-10.1c-0.1-0.2-0.2-0.3-0.4-0.3c-0.2,0-0.3,0.1-0.4,0.3L76.1,44c-0.1,0.2-0.2,0.3-0.4,0.3h-1.3c-0.2,0-0.3-0.1-0.4-0.3    l-6.9-21.2c0-0.1,0-0.3,0.1-0.4c0.1-0.1,0.2-0.2,0.3-0.2h1.4c0.2,0,0.3,0.1,0.4,0.3l5.4,16.7c0.1,0.2,0.2,0.3,0.4,0.3    c0.2,0,0.3-0.1,0.4-0.3l3.3-10.4l0,0l0.1-0.2h1.7c0.2,0,0.3,0.1,0.4,0.3l3.3,10.3c0.1,0.2,0.2,0.3,0.4,0.3c0.2,0,0.3-0.1,0.4-0.3    l5.4-16.7c0.1-0.2,0.2-0.3,0.4-0.3H92C92.1,22.2,92.2,22.3,92.3,22.4z"></path>
+		<path class="st12" d="M104.2,43.9c0,0.1,0,0.1-0.1,0.2c0,0-0.1,0.1-0.2,0.1h-1.6c-0.1,0-0.2-0.1-0.2-0.2c0-0.7,0-3.2-0.3-6.2    c0-0.1-0.1-0.2-0.2-0.2h-7.2c-0.1,0-0.2,0.1-0.2,0.2C94,40.7,94,43.2,94,44c0,0.1-0.1,0.2-0.2,0.2h-1.6c-0.1,0-0.1,0-0.2-0.1    c0,0-0.1-0.1-0.1-0.2c0-3.5,0.2-7,0.6-10.4c0.9-7.8,2.7-11.4,5.5-11.4c2.8,0,4.6,3.6,5.5,11.4C104,37,104.2,40.5,104.2,43.9z     M101.4,35.5c0.1,0,0.1,0,0.2-0.1c0,0,0.1-0.1,0.1-0.2c0-0.5-0.1-1-0.2-1.4c-1.1-9.1-3.1-9.6-3.4-9.6s-2.3,0.5-3.4,9.6    c-0.1,0.5-0.1,1-0.2,1.4c0,0.1,0,0.1,0.1,0.2c0,0,0.1,0.1,0.2,0.1L101.4,35.5L101.4,35.5z"></path>
+		<path class="st12" d="M131.5,40.7c0.2,0.1,0.3,0.2,0.3,0.4v1.4c0,0.2-0.1,0.3-0.2,0.4c-1.3,0.7-3,1.3-5.5,1.3c-0.2,0-0.5,0-0.8,0    c-7-0.3-10.5-6-12.1-8.8l0-0.1c-0.1-0.1-0.1-0.2-0.3-0.2c-0.1,0-0.2,0-0.3,0.1c-1,0.8-2,1.6-3.2,2.2c-0.1,0.1-0.2,0.2-0.2,0.3v6.1    c0,0.1,0,0.2-0.1,0.3c-0.1,0.1-0.2,0.1-0.3,0.1h-1.4c-0.2,0-0.4-0.2-0.4-0.4V22.4c0-0.2,0.2-0.4,0.4-0.4h1.4c0.1,0,0.2,0,0.3,0.1    c0.1,0.1,0.1,0.2,0.1,0.3v12c0,0.1,0.1,0.3,0.2,0.3c0.1,0.1,0.3,0.1,0.4,0c3.4-2.5,7.4-7.1,7.6-12.2c0-0.2,0.2-0.3,0.4-0.4h1.4    c0.1,0,0.2,0,0.3,0.1c0.1,0.1,0.1,0.2,0.1,0.3c-0.1,2.8-1.5,7.1-4.8,10.8c-0.1,0.1-0.1,0.3,0,0.4c0.1,0.2,0.2,0.4,0.4,0.6    c1.6,2.6,4.5,7.5,10.5,7.7c2.8,0.1,4.6-0.6,5.6-1.4C131.1,40.6,131.3,40.6,131.5,40.7z M122.6,37c-1-1-1.5-2.3-1.5-3.6    c0-1.8,0.5-3.2,1.6-4.2c0.2-0.2,0.5-0.4,0.7-0.5c0.1-0.1,0.1-0.1,0.2-0.2c0-0.1,0-0.2-0.1-0.3c-0.2-0.2-0.4-0.5-0.5-0.8    c-0.5-0.9-0.5-2-0.1-2.9c0.6-1.6,2-2.6,3.6-2.5c1.5,0,2.9,1,3.4,2.4c0,0.1,0,0.2,0,0.3c0,0.1-0.1,0.2-0.2,0.2l-1.3,0.4    c-0.2,0.1-0.4,0-0.4-0.2c-0.3-0.6-0.8-1-1.5-1c-0.7,0-1.3,0.4-1.6,1.2c-0.2,0.4-0.2,0.9,0,1.2c0.4,0.7,1.3,1.2,1.8,1.4    c0.2,0.1,0.3,0.2,0.2,0.4l-0.3,1.4c0,0.2-0.2,0.3-0.3,0.3c-0.5,0-1.5,0.2-2.2,0.8c-0.6,0.6-0.9,1.5-0.9,2.7c0,0.8,0.3,1.6,0.9,2.1    c0.6,0.6,1.5,1,2.3,1c1.1,0,1.9-0.4,2.5-1c0.5-0.5,0.7-1.2,0.7-2c0-0.2,0.1-0.3,0.3-0.4l1.4-0.2c0.1,0,0.2,0,0.3,0.1    c0.1,0.1,0.1,0.2,0.1,0.3c0.1,1.3-0.4,2.6-1.2,3.6c-1,1.1-2.4,1.8-4.1,1.8C125,38.6,123.6,38.1,122.6,37z"></path>
+		<path class="st12" d="M147.4,22.2c0,0,0.1,0.1,0.1,0.2v21.4c0,0.1-0.1,0.2-0.2,0.2l-0.6,0.2c-0.1,0-0.2,0-0.3,0    c-0.6,0-0.9-0.5-1.1-0.9c0,0,0-0.1-0.1-0.1c-0.1-0.1-0.1-0.2-2.7-4.9c-1.5-2.7-3.3-6.1-4.8-8.8l-0.2-0.4l-0.6-1    c-0.1-0.1-0.2-0.1-0.3-0.1c-0.1,0-0.2,0.1-0.2,0.2v15.8c0,0.1-0.1,0.2-0.2,0.2h-1.6c-0.1,0-0.2-0.1-0.2-0.2V22.5    c0-0.1,0.1-0.2,0.2-0.2l0.6-0.2c0.8-0.2,1.1,0.4,1.4,0.9l0.1,0.1c0.1,0.1,0.1,0.2,2.7,4.9c1.5,2.8,3.3,6.1,4.8,8.8l0.3,0.5    c0.2,0.3,0.4,0.7,0.6,1c0.1,0.1,0.2,0.1,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2V22.3c0-0.1,0.1-0.2,0.2-0.2h1.6    C147.3,22.1,147.4,22.1,147.4,22.2z"></path>
+		<path class="st12" d="M151.1,44.2V22.1c0,0,0.1,0,0.2,0c0.1,0,1.9,0,1.9,0v22.1c0,0-0.1,0-0.2,0C152.8,44.2,151.1,44.2,151.1,44.2    z"></path>
+		<path class="st12" d="M169.9,22.2c0,0,0.1,0.1,0.1,0.2v21.4c0,0.1-0.1,0.2-0.2,0.2l-0.6,0.2c-0.1,0-0.2,0-0.3,0    c-0.6,0-0.9-0.5-1.1-0.9c0,0,0-0.1-0.1-0.1c-0.1-0.1-0.1-0.2-2.7-4.9c-1.5-2.7-3.3-6.1-4.8-8.8l-0.2-0.4l-0.6-1    c-0.1-0.1-0.2-0.1-0.3-0.1c-0.1,0-0.2,0.1-0.2,0.2v15.8c0,0.1-0.1,0.2-0.2,0.2h-1.6c-0.1,0-0.2-0.1-0.2-0.2V22.5    c0-0.1,0.1-0.2,0.2-0.2l0.6-0.2c0.8-0.2,1.1,0.4,1.4,0.9l0.1,0.1c0.1,0.1,0.1,0.2,2.7,4.9c1.5,2.8,3.3,6.1,4.8,8.8l0.3,0.5    c0.2,0.3,0.4,0.7,0.6,1c0.1,0.1,0.2,0.1,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2V22.3c0-0.1,0.1-0.2,0.2-0.2h1.6    C169.8,22.1,169.8,22.1,169.9,22.2z"></path>
+		<path class="st12" d="M187.3,33.1c0,0.6-0.1,2.1-0.1,2.1c-0.5,5.7-2.9,9-7,9c-1.7,0-3.3-0.7-4.5-1.9c-1.9-1.9-3-5.4-3-9.2    c0.1-5.3,2.1-11,7.6-11c3.4,0,5.8,2.1,6.4,5.8c0,0.1,0,0.2-0.1,0.2c0,0.1-0.1,0.1-0.2,0.1l-1.5,0.2c-0.2,0-0.3-0.1-0.3-0.2    c-0.5-2.7-1.9-4-4.3-4c-1.8,0-3.2,0.9-4.2,2.7c-0.8,1.6-1.3,3.8-1.3,6.2c0,2.5,0.6,5.9,2.4,7.7c0.8,0.8,1.9,1.3,3,1.3    c3.4,0,4.5-3.6,4.8-6.6c0-0.1,0-0.2-0.1-0.2c-0.1-0.1-0.1-0.1-0.2-0.1H180c-0.2,0-0.3-0.1-0.3-0.3v-1.5c0-0.2,0.1-0.3,0.3-0.3    L187.3,33.1L187.3,33.1L187.3,33.1z"></path>
+	</g>
+</g>
+</svg>
+</header>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="eyebrow">Founding Mothers Media · Unfurl Project · Working Document</div>
+  <h1>Stephanie Hupp<br><span style="font-weight:400; font-style:italic;">Voice Guidelines</span></h1>
+  <p class="sub">Distilled from newsletters, meeting transcripts & brand creative direction · for website copy</p>
+  <div class="header-rule"></div>
+</div>
+
+<!-- VOICE PERSONA -->
+<div class="persona-box">
+  <h2>"A woman who has crossed her own threshold<br>and now holds the door open for others."</h2>
+  <p>Stephanie writes and speaks like someone who has earned her words through real experience — embodied, emotionally honest, theologically grounded without dogma. She is devotional without being vague, spiritual without being saccharine, authoritative without performing authority.</p>
+  <div class="persona-attrs">
+    <span class="attr-pill">Ceremonial</span>
+    <span class="attr-pill">Body-Literate</span>
+    <span class="attr-pill">Devotional</span>
+    <span class="attr-pill">Unapologetically Spiritual</span>
+    <span class="attr-pill">Potent · Not Wordy</span>
+    <span class="attr-pill">Real + Raw</span>
+    <span class="attr-pill">Warm Authority</span>
+  </div>
+</div>
+
+<!-- SECTION 1: TONE -->
+<div class="section">
+  <div class="section-label">01</div>
+  <div class="section-title">Tone in Three Words per Mode</div>
+  <div class="section-desc">Her voice shifts depth depending on context — but never shifts character.</div>
+
+  <div class="grid-3">
+    <div class="card">
+      <div class="card-title">Main Site Pages</div>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:22px; font-style:italic; color:var(--plum); margin-bottom:10px;">Tender. Precise. Inviting.</p>
+      <p>Warm and present. Treats the reader like a beloved who has arrived at the door. Body-literate without being clinical. Luminous.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Sensual Serpents</div>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:22px; font-style:italic; color:var(--plum); margin-bottom:10px;">Mythic. Devotional. Initiatory.</p>
+      <p>A woman calling other women into the temple. Ceremonial in cadence. She is both guide and fellow traveler. The stakes are higher.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Workshops / Community</div>
+      <p style="font-family:'Cormorant Garamond',serif; font-size:22px; font-style:italic; color:var(--plum); margin-bottom:10px;">Open. Nourishing. Clear.</p>
+      <p>Accessible to women who are new. Still spiritual, but the door is wide. "Come as you are" energy. Welcoming + practical in equal measure.</p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: SENTENCE GRAMMAR -->
+<div class="section">
+  <div class="section-label">02</div>
+  <div class="section-title">Sentence Structure + Grammar Patterns</div>
+  <div class="section-desc">These are her deliberate choices — not errors. Use them exactly as she does.</div>
+
+  <div style="display:flex; flex-direction:column; gap:14px;">
+
+    <div class="rhythm-block">
+      <h3>The Anaphora Stack</h3>
+      <div class="sub">Repeated opening phrases build rhythm and weight</div>
+      <div class="rhythm-example">
+        To meet yourself fully.<br>
+        To hold yourself fully.<br>
+        To feel yourself fully.<br>
+        To witness yourself fully —
+      </div>
+      <div class="rhythm-note">Use for: listing what a session offers, what healing feels like, what a woman will experience. Always end the stack with an em dash or a pivot sentence.</div>
+    </div>
+
+    <div class="rhythm-block">
+      <h3>The Fragment Pair</h3>
+      <div class="sub">A standalone fragment for emphasis after a full sentence</div>
+      <div class="rhythm-example">
+        She knew this was the path I had been waiting for. Longing for.<br><br>
+        I answered the call without hesitation.
+      </div>
+      <div class="rhythm-note">Solo fragments are deliberate emphasis — they make the reader pause. Never "fix" them. Use after a complete sentence to land the weight.</div>
+    </div>
+
+    <div class="rhythm-block">
+      <h3>The Em Dash Pivot</h3>
+      <div class="sub">Em dash marks a breath or a turn</div>
+      <div class="rhythm-example">
+        My body trembled — she knew.<br><br>
+        It felt divinely aligned, this invitation to walk with the serpentine energy,<br>as if she had been waiting for me at the gateway of this new era of my life.
+      </div>
+      <div class="rhythm-note">Em dash is her primary punctuation move — use it to pivot from feeling to revelation, or from image to meaning.</div>
+    </div>
+
+    <div class="rhythm-block">
+      <h3>The Safety Anchor</h3>
+      <div class="sub">One grounded, clear sentence drops into a sea of poetic language</div>
+      <div class="rhythm-example">
+        Creating space to feel it all. To witness what lives in the tissue. To soften what has been held...<br><br>
+        <span style="font-weight:600; font-style:normal; font-family:'DM Sans',sans-serif; font-size:13px;">↓ then:</span><br><br>
+        This heartfelt practice supports the processing of emotions, reduces pain and stagnation, and brings hydration and vitality to the breast tissue.
+      </div>
+      <div class="rhythm-note">Every poetic passage needs one clinical-adjacent sentence to anchor trust. One is enough. It reassures the skeptic without breaking the spell for the believer.</div>
+    </div>
+
+    <div class="rhythm-block">
+      <h3>The Invitation Close</h3>
+      <div class="sub">Opens a door — never pushes through it</div>
+      <div class="rhythm-example">
+        If you feel called, let's talk about how we can care for your beautiful breasts together 🌸<br><br>
+        If you feel the pull — if you're ready to reconnect with your body, soften, release, and rise — please reply to this email with your embodied yes.
+      </div>
+      <div class="rhythm-note">"If you feel called" is her signature CTA. Never pressure. Always invitation. The reader self-selects. This is intentional — she is not for everyone and the writing reflects that.</div>
+    </div>
+
+    <div class="rhythm-block">
+      <h3>The Triple Parallel</h3>
+      <div class="sub">Three matching phrases that build toward the final image</div>
+      <div class="rhythm-example">
+        Where movement becomes prayer,<br>
+        breath becomes devotion,<br>
+        and the body becomes the altar of awakening.
+      </div>
+      <div class="rhythm-note">Use for descriptions of Sensual Serpents, the transformative arc of a session, or when naming what the work offers at its fullest depth.</div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SECTION 3: VOCABULARY -->
+<div class="section">
+  <div class="section-label">03</div>
+  <div class="section-title">Vocabulary Bank</div>
+  <div class="section-desc">Pull from these word families. Her vocabulary is specific, bodied, and sacred — never vague or clinical.</div>
+
+  <div class="vocab-grid">
+    <div class="vocab-col verbs">
+      <h3>Her Verbs — action words she reaches for</h3>
+      <div class="vocab-tags">
+        <span class="tag tag-v">soften</span>
+        <span class="tag tag-v">unfurl</span>
+        <span class="tag tag-v">uncoil</span>
+        <span class="tag tag-v">shed</span>
+        <span class="tag tag-v">melt</span>
+        <span class="tag tag-v">surrender</span>
+        <span class="tag tag-v">tend</span>
+        <span class="tag tag-v">witness</span>
+        <span class="tag tag-v">hold</span>
+        <span class="tag tag-v">receive</span>
+        <span class="tag tag-v">drop into</span>
+        <span class="tag tag-v">awaken</span>
+        <span class="tag tag-v">transmute</span>
+        <span class="tag tag-v">nourish</span>
+        <span class="tag tag-v">open</span>
+        <span class="tag tag-v">honor</span>
+        <span class="tag tag-v">release</span>
+        <span class="tag tag-v">feel</span>
+        <span class="tag tag-v">reveal</span>
+        <span class="tag tag-v">reclaim</span>
+        <span class="tag tag-v">rise</span>
+        <span class="tag tag-v">meet yourself</span>
+        <span class="tag tag-v">come home</span>
+      </div>
+    </div>
+
+    <div class="vocab-col nouns">
+      <h3>Her Nouns — the world she lives in</h3>
+      <div class="vocab-tags">
+        <span class="tag tag-n">wombspace</span>
+        <span class="tag tag-n">heartspace</span>
+        <span class="tag tag-n">tissue</span>
+        <span class="tag tag-n">threshold</span>
+        <span class="tag tag-n">portal</span>
+        <span class="tag tag-n">sacred container</span>
+        <span class="tag tag-n">devotion</span>
+        <span class="tag tag-n">ceremony</span>
+        <span class="tag tag-n">initiation</span>
+        <span class="tag tag-n">lineage</span>
+        <span class="tag tag-n">medicine</span>
+        <span class="tag tag-n">altar</span>
+        <span class="tag tag-n">temple</span>
+        <span class="tag tag-n">alchemy</span>
+        <span class="tag tag-n">Shakti</span>
+        <span class="tag tag-n">life force</span>
+        <span class="tag tag-n">essence</span>
+        <span class="tag tag-n">sisters</span>
+        <span class="tag tag-n">beloved</span>
+        <span class="tag tag-n">breath</span>
+        <span class="tag tag-n">armor</span>
+        <span class="tag tag-n">radiance</span>
+      </div>
+    </div>
+
+    <div class="vocab-col phrases">
+      <h3>Her Phrases — the formulas she returns to</h3>
+      <div class="vocab-tags">
+        <span class="tag tag-p">if you feel called</span>
+        <span class="tag tag-p">embodied yes</span>
+        <span class="tag tag-p">sacred space</span>
+        <span class="tag tag-p">come as you are</span>
+        <span class="tag tag-p">you become your own medicine</span>
+        <span class="tag tag-p">incredibly vulnerable and brave</span>
+        <span class="tag tag-p">I deeply honor your yes</span>
+        <span class="tag tag-p">held with reverence and presence</span>
+        <span class="tag tag-p">in service to women</span>
+        <span class="tag tag-p">the body holds wisdom</span>
+        <span class="tag tag-p">a return to yourself</span>
+        <span class="tag tag-p">in your fullness</span>
+        <span class="tag tag-p">allow yourself to be held</span>
+      </div>
+    </div>
+
+    <div class="vocab-col avoid">
+      <h3>Do Not Use — she would not say these</h3>
+      <div class="vocab-tags">
+        <span class="tag tag-x">holistic healing journey</span>
+        <span class="tag tag-x">coach</span>
+        <span class="tag tag-x">empower yourself</span>
+        <span class="tag tag-x">self-care routine</span>
+        <span class="tag tag-x">wellness warrior</span>
+        <span class="tag tag-x">transform your life</span>
+        <span class="tag tag-x">manifest</span>
+        <span class="tag tag-x">authentic self</span>
+        <span class="tag tag-x">intuitive eating</span>
+        <span class="tag tag-x">vibe</span>
+        <span class="tag tag-x">badass</span>
+        <span class="tag tag-x">boss babe</span>
+        <span class="tag tag-x">limited spots!</span>
+        <span class="tag tag-x">book now!</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 4: QUOTES -->
+<div class="section">
+  <div class="section-label">04</div>
+  <div class="section-title">Her Voice, Verbatim</div>
+  <div class="section-desc">Read these when you need to recalibrate. This is her voice at its most concentrated.</div>
+
+  <div class="quote-block">
+    "These stories, buried deeply within our breast tissue, can be accessed when we hold our breasts with reverence and presence. Creating space to feel it all. To witness what lives in the tissue. To soften what has been held. To allow pain to transmute into beauty through breath, touch, and care."
+    <span class="quote-source">— Breast Massage Newsletter · February 2026</span>
+  </div>
+
+  <div class="quote-block">
+    "Sensual Serpents is a temple path of embodied alchemy. A sacred initiation where the chakras become gateways for healing, remembrance, and liberation. Through dance, breath, sound, and ritual, the serpent of Shakti awakens within, shedding layers of fear and distortion to reveal power, pleasure, love, and truth."
+    <span class="quote-source">— Sensual Serpents Newsletter</span>
+  </div>
+
+  <div class="quote-block">
+    "It felt divinely aligned, this invitation to walk with the serpentine energy, as if she had been waiting for me at the gateway of this new era of my life."
+    <span class="quote-source">— Year of the Snake Newsletter</span>
+  </div>
+
+  <div class="quote-block">
+    "By placing your own hands on your belly and breathing compassion to the womb space, you become your own medicine and can begin to awaken into your innate womb wisdom."
+    <span class="quote-source">— Nurturing the Womb Workshop Description</span>
+  </div>
+
+  <div class="quote-block">
+    "Opening your heart and allowing yourself to be held, surrendering into the chambers of your heart, is incredibly vulnerable and brave, and I deeply honor your yes to this deeper work."
+    <span class="quote-source">— Breast Massage Newsletter · February 2026</span>
+  </div>
+</div>
+
+<!-- SECTION 5: DO/DON'T -->
+<div class="section">
+  <div class="section-label">05</div>
+  <div class="section-title">Do / Don't — Side by Side</div>
+  <div class="section-desc">Direct substitutions for common copy pitfalls.</div>
+
+  <div class="comparison">
+    <div class="do-side">
+      <span class="comp-label do">✓ Say This</span>
+      <div class="comp-text">If you feel called, let's talk about how we can care for your beautiful breasts together.</div>
+    </div>
+    <div class="dont-side">
+      <span class="comp-label dont">✗ Not This</span>
+      <div class="comp-text">Book your breast massage session today! Limited availability.</div>
+    </div>
+  </div>
+
+  <div class="comparison">
+    <div class="do-side">
+      <span class="comp-label do">✓ Say This</span>
+      <div class="comp-text">This work is for the woman who is ready to go deep — who is willing to feel what her body has been carrying.</div>
+    </div>
+    <div class="dont-side">
+      <span class="comp-label dont">✗ Not This</span>
+      <div class="comp-text">This session is perfect for anyone who wants to improve their wellness and feel their best.</div>
+    </div>
+  </div>
+
+  <div class="comparison">
+    <div class="do-side">
+      <span class="comp-label do">✓ Say This</span>
+      <div class="comp-text">You do not have to live with painful periods. You do not have to live with pelvic pain. Your body holds the capacity to heal — it is waiting to be listened to.</div>
+    </div>
+    <div class="dont-side">
+      <span class="comp-label dont">✗ Not This</span>
+      <div class="comp-text">Say goodbye to painful periods with our holistic massage therapy approach!</div>
+    </div>
+  </div>
+
+  <div class="comparison">
+    <div class="do-side">
+      <span class="comp-label do">✓ Say This</span>
+      <div class="comp-text">Sessions are ceremonial in nature — each one begins with smudging, grounding, and music that holds the container for the work.</div>
+    </div>
+    <div class="dont-side">
+      <span class="comp-label dont">✗ Not This</span>
+      <div class="comp-text">Stephanie offers a unique spiritual approach to massage that incorporates holistic healing rituals for a transformative experience.</div>
+    </div>
+  </div>
+
+  <div class="comparison">
+    <div class="do-side">
+      <span class="comp-label do">✓ Say This</span>
+      <div class="comp-text">Stephanie is an educator and guide — not a coach. Her work does not fit into a program or a plan. It moves with you.</div>
+    </div>
+    <div class="dont-side">
+      <span class="comp-label dont">✗ Not This</span>
+      <div class="comp-text">As your women's wellness coach, Stephanie will help you achieve your health goals through a customized healing program.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 6: COPY FORMULAS -->
+<div class="section">
+  <div class="section-label">06</div>
+  <div class="section-title">Copy Formulas for Each Page Type</div>
+  <div class="section-desc">Structural patterns to follow when building out each section from scratch.</div>
+
+  <div class="formula">
+    <div class="formula-name">Service Page Opening</div>
+    <div class="formula-steps">
+      <span class="step">Name the pain she carries</span>
+      <span class="step-arrow">→</span>
+      <span class="step">Honor that she has kept going</span>
+      <span class="step-arrow">→</span>
+      <span class="step">Introduce the work as a threshold</span>
+      <span class="step-arrow">→</span>
+      <span class="step">One clinical anchor sentence</span>
+      <span class="step-arrow">→</span>
+      <span class="step">Invitation ("if you feel called")</span>
+    </div>
+  </div>
+
+  <div class="formula">
+    <div class="formula-name">About Page Arc</div>
+    <div class="formula-steps">
+      <span class="step">Her threshold story (turning 50, the serpent dream)</span>
+      <span class="step-arrow">→</span>
+      <span class="step">What broke open in her</span>
+      <span class="step-arrow">→</span>
+      <span class="step">The lineage she trained in</span>
+      <span class="step-arrow">→</span>
+      <span class="step">What she holds for clients</span>
+      <span class="step-arrow">→</span>
+      <span class="step">Who this is for</span>
+    </div>
+  </div>
+
+  <div class="formula">
+    <div class="formula-name">Sensual Serpents Page</div>
+    <div class="formula-steps">
+      <span class="step">Mythic opening — the serpent as teacher</span>
+      <span class="step-arrow">→</span>
+      <span class="step">What the journey does (concrete + poetic)</span>
+      <span class="step-arrow">→</span>
+      <span class="step">The 7 weeks as portals</span>
+      <span class="step-arrow">→</span>
+      <span class="step">Who is ready for this</span>
+      <span class="step-arrow">→</span>
+      <span class="step">The invitation</span>
+    </div>
+  </div>
+
+  <div class="formula">
+    <div class="formula-name">Workshop Description</div>
+    <div class="formula-steps">
+      <span class="step">One warm sentence opening (address: "Beautiful sisters" or "Beloved")</span>
+      <span class="step-arrow">→</span>
+      <span class="step">What we'll do together</span>
+      <span class="step-arrow">→</span>
+      <span class="step">Who it supports (conditions list)</span>
+      <span class="step-arrow">→</span>
+      <span class="step">Logistics (date, time, cost)</span>
+      <span class="step-arrow">→</span>
+      <span class="step">"Come as you are" close</span>
+    </div>
+  </div>
+
+  <div class="formula">
+    <div class="formula-name">Testimonial Pull Quote Format</div>
+    <div class="formula-steps">
+      <span class="step">Short (1–2 sentences)</span>
+      <span class="step-arrow">→</span>
+      <span class="step">Bodily or felt language</span>
+      <span class="step-arrow">→</span>
+      <span class="step">First name + city only (no last name)</span>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 7: WHAT SHE IS NOT -->
+<div class="section">
+  <div class="section-label">07</div>
+  <div class="section-title">What This Voice Is Not</div>
+  <div class="section-desc">Hard guardrails. If copy sounds like any of these, rewrite it.</div>
+
+  <div class="grid-2">
+    <div class="card">
+      <div class="card-title">Not "Love and Light" wellness-speak</div>
+      <p>Stephanie explicitly said: real, raw, and colorful — not superficially positive. Her work meets grief, pain, ancestral wounds, and the body's darkness. The copy must be willing to go there too.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Not clinical distance</div>
+      <p>She is not a medical provider describing procedures. She is a guide who sits across the table from you and sees you fully. Copy should feel like presence, not a brochure.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Not bullet-point wellness menus</div>
+      <p>Lists of benefits are allowed only after she has already created felt sense. Leading with bullet points flattens her voice into generic wellness marketing. Lead with story and image. Anchor with facts.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Not urgency-marketing</div>
+      <p>No "limited spots," no countdowns, no "don't miss out." Her clients self-select. The copy is a mirror — those who see themselves in it will step forward. Pressure is antithetical to her practice.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Not over-explained</div>
+      <p>"Softer, less wordy, more potent and juicy" is her own direction. Every sentence earns its place. If it can be cut without losing meaning, cut it. Density of experience — not density of words.</p>
+    </div>
+    <div class="card">
+      <div class="card-title">Not performing humility</div>
+      <p>Stephanie holds genuine authority. "Holding this space is an honor" is humble — but she also says "I am ready. Ready to share with you. Ready to guide you." She inhabits both. Copy should too.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  Stephanie Hupp · Awakening Bodywork for Women · Cary, NC<br>
+  Voice Guidelines prepared by Kyra · Founding Mothers Media · Unfurl Project · March 2026<br>
+  <em>Source material: MailChimp newsletter archive, Disco Call transcript (Feb 11), DROP-IN #1 transcript (Mar 11), Brand Creative Direction doc</em>
+</div>
+
+</body>
+</html>

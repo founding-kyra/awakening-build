@@ -1,0 +1,1813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Awakening Bodywork — Full Website Copy Deck</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,400;1,600&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+  :root {
+    --rose:   #B8685E;
+    --blush:  #D4A0A8;
+    --sand:   #F2E8DE;
+    --parch:  #FAF5EF;
+    --deep:   #2C1E2A;
+    --mid:    #6A5568;
+    --gold:   #C09A50;
+    --teal:   #4A7874;
+    --lilac:  #E8D5F0;
+    --plum:   #6B4C82;
+    --border: #DDD0C8;
+    --white:  #FFFFFF;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--parch);
+    color: var(--deep);
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  /* NAV */
+  .sidenav {
+    position: sticky;
+    top: 0;
+    width: 220px;
+    height: 100vh;
+    flex-shrink: 0;
+    background: var(--deep);
+    overflow-y: auto;
+    padding: 28px 0 40px;
+    z-index: 100;
+    align-self: flex-start;
+  }
+  .sidenav .nav-brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+    font-style: italic;
+    color: rgba(255,255,255,0.5);
+    padding: 0 20px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    margin-bottom: 16px;
+    line-height: 1.5;
+  }
+  .sidenav a {
+    display: block;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    letter-spacing: 0.3px;
+    transition: all 0.15s;
+  }
+  .sidenav a:hover { color: var(--white);  }
+  .sidenav a.active { color: var(--white); border-left: 3px solid var(--rose); padding-left: 17px; }
+  .sidenav .nav-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.25);
+    padding: 16px 20px 6px;
+  }
+
+  /* MAIN */
+  .page-body {
+    display: flex;
+    align-items: flex-start;
+  }
+  .main {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+  }
+
+  /* COVER */
+  .cover {
+    background: linear-gradient(160deg, var(--deep) 0%, #3D2535 100%);
+    padding: 80px 64px;
+    color: var(--white);
+  }
+  .cover .eyebrow {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--blush);
+    font-weight: 600;
+    margin-bottom: 20px;
+  }
+  .cover h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    color: var(--white);
+  }
+  .cover h1 em { font-weight: 300; color: rgba(255,255,255,0.7); }
+  .cover .sub {
+    font-size: 14px;
+    color: rgba(255,255,255,0.55);
+    margin-top: 12px;
+    font-style: italic;
+  }
+  .cover-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 36px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.12);
+  }
+  .cover-meta-item { font-size: 12px; color: rgba(255,255,255,0.5); }
+  .cover-meta-item strong { color: rgba(255,255,255,0.85); display: block; margin-bottom: 2px; }
+
+  /* PAGE SECTION */
+  .page-section {
+    padding: 64px 64px 80px;
+    border-bottom: 3px solid var(--deep);
+  }
+  .page-section:last-child { border-bottom: none; }
+  .page-section:nth-child(even) { background: var(--white); }
+
+  .page-header {
+    margin-bottom: 40px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  .page-number {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 8px;
+  }
+  .page-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 36px;
+    font-weight: 600;
+    color: var(--deep);
+    margin-bottom: 4px;
+  }
+  .page-url {
+    font-size: 12px;
+    color: var(--mid);
+    font-family: monospace;
+    background: var(--sand);
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  /* META BOX */
+  .meta-box {
+    background: var(--sand);
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-bottom: 8px;
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    gap: 8px 16px;
+    align-items: start;
+  }
+  .meta-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--mid);
+    padding-top: 2px;
+  }
+  .meta-value {
+    font-size: 13px;
+    color: var(--deep);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* COPY BLOCK */
+  .copy-section {
+    margin-bottom: 36px;
+  }
+  .copy-section:last-child { margin-bottom: 0; }
+
+  .copy-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .copy-tag {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: var(--deep);
+    color: var(--white);
+    padding: 3px 10px;
+    border-radius: 4px;
+  }
+  .copy-tag.h1 { background: var(--rose); }
+  .copy-tag.h2 { background: var(--plum); }
+  .copy-tag.h3 { background: var(--teal); }
+  .copy-tag.sub { background: var(--mid); }
+  .copy-tag.body { background: var(--deep); }
+  .copy-tag.cta { background: var(--gold); color: var(--deep); }
+  .copy-tag.seo { background: var(--sand); color: var(--mid); border: 1px solid var(--border); }
+  .copy-tag.note { background: #FFF3E0; color: #8B6000; border: 1px solid #E6C97A; }
+
+  .copy-rule {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+
+  .copy-text {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 28px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    line-height: 1.75;
+    color: var(--deep);
+  }
+  .copy-text.dm {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .copy-text p { margin-bottom: 16px; }
+  .copy-text p:last-child { margin-bottom: 0; }
+  .copy-text strong {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .copy-text em { font-style: italic; }
+  .copy-text br { display: block; content: ''; margin-top: 4px; }
+
+  /* INDENT BLOCK — anaphora, fragments */
+  .anaphora {
+    padding-left: 24px;
+    border-left: 3px solid var(--blush);
+    margin: 12px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-style: italic;
+    line-height: 2;
+    color: var(--deep);
+  }
+
+  /* NOTE CALLOUT */
+  .note-box {
+    background: #FFF9EE;
+    border: 1px solid #E6C97A;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 12px;
+    color: #6B4A00;
+    line-height: 1.6;
+    margin-top: 8px;
+  }
+  .note-box strong { font-weight: 700; }
+
+  /* FAQ */
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 22px 26px;
+    margin-bottom: 12px;
+  }
+  .faq-q {
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--plum);
+    margin-bottom: 10px;
+  }
+  .faq-a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--deep);
+  }
+
+  /* DIVIDER */
+  .divider {
+    border: none;
+    height: 1px;
+    background: var(--border);
+    margin: 32px 0;
+  }
+
+  /* BADGE */
+  .badge {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .badge-seo { background: #E8F4F3; color: var(--teal); }
+  .badge-new { background: var(--lilac); color: var(--plum); }
+
+  /* SERVICES GRID PREVIEW */
+  .services-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 4px;
+  }
+  .service-tile {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+  }
+  .service-tile-name {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--rose);
+    margin-bottom: 6px;
+  }
+  .service-tile-copy {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--deep);
+  }
+
+  
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #6B4C82;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 60px;
+    box-shadow: 0 2px 16px rgba(107,76,130,0.18);
+  }
+  #site-nav .nav-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    flex-shrink: 0;
+  }
+  #site-nav .nav-logo img {
+    height: 36px;
+    width: auto;
+    
+  }
+  #site-nav .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  #site-nav .nav-links a {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+  #site-nav .nav-links a:hover,
+  #site-nav .nav-links a.active {
+    color: #C9A84C;
+  }
+  @media (max-width: 640px) {
+    #site-nav { padding: 0 16px; height: auto; min-height: 340px; flex-wrap: wrap; gap: 8px; padding-top: 10px; padding-bottom: 10px; }
+    #site-nav .nav-links { gap: 4px; }
+    #site-nav .nav-links a {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    padding: 4px 10px;
+    white-space: nowrap;
+  }
+    #site-nav .nav-logo img { height: 28px; }
+  }
+
+
+  /* ── SITE HEADER ── */
+  #site-header {
+    background: #6B4C82;
+    padding: 36px 24px 52px;
+    min-height: 340px;
+    
+    margin-bottom: 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  #site-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 40%, rgba(196,160,184,0.18) 0%, transparent 65%),
+                radial-gradient(ellipse at 20% 80%, rgba(201,168,76,0.12) 0%, transparent 55%);
+    pointer-events: none;
+  }
+  #site-header > * { position: relative; }
+  #site-nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+    padding-top: 8px;
+  }
+  #site-nav-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.65);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  #site-nav-links a:hover,
+  #site-nav-links a.active { color: #C9A84C; }
+  @media (max-width: 600px) {
+    #site-nav-links { gap: 16px; }
+    #site-nav-links a { font-size: 10px; }
+  }
+
+</style>
+</head>
+<body>
+<header id="site-header">
+  <nav id="site-nav-links">
+    <a href="1-index.html">Home</a>
+    <a href="awakening-bodywork-sitemap.html">Sitemap</a>
+    <a href="awakening-bodywork-voice-guidelines.html">Voice</a>
+    <a href="awakening-bodywork-copy-deck.html" class="active">Copy Deck</a>
+    <a href="awakening-bodywork-flowchart.html">Flowchart</a>
+  </nav>
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"  x="0px" y="0px" viewBox="0 0 189.4 72" style="height:166px;width:auto;display:block;margin:0 auto 24px;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_00000094586390388915190850000004824286473988598706_);}
+	.st2{fill:#90B289;}
+	.st3{fill:url(#SVGID_00000135650122613398842990000016008181130434093448_);}
+	.st4{fill:url(#SVGID_00000074441300234155120730000006379697349540598182_);}
+	.st5{fill:url(#SVGID_00000120553643068955262500000013888496911693048495_);}
+	.st6{fill:url(#SVGID_00000073707210156301497780000013501109323318253754_);}
+	.st7{fill:url(#SVGID_00000005959236041976489660000009802236034581265801_);}
+	.st8{fill:url(#SVGID_00000005226924234209137620000002262913672807405712_);}
+	.st9{fill:url(#SVGID_00000134225283858709780680000016847175277447383740_);}
+	.st10{fill:url(#SVGID_00000183957869229667301720000003026737881009194164_);}
+	.st11{fill:url(#SVGID_00000047772498539214354780000003474191062884283028_);}
+	.st12{fill:#FFFFFF;}
+	.st13{fill:url(#SVGID_00000111163307999619765560000000378571641019052165_);}
+	.st14{fill:url(#SVGID_00000134215988225523907900000017906287973748599218_);}
+	.st15{fill:url(#SVGID_00000096756931240193052930000005964727023998766774_);}
+	.st16{fill:url(#SVGID_00000132799660654146341660000013953318051235980947_);}
+	.st17{fill:url(#SVGID_00000045586133308344514580000004581977584323142830_);}
+	.st18{fill:url(#SVGID_00000062891950127563354160000017424302096927815605_);}
+	.st19{fill:url(#SVGID_00000023987696883627750280000013163688036169496500_);}
+	.st20{fill:url(#SVGID_00000025419378579891834290000004144305571707337628_);}
+	.st21{fill:url(#SVGID_00000080168138319080386920000007183354094486398378_);}
+	.st22{fill:url(#SVGID_00000096782165039754015580000017377722284070733997_);}
+</style>
+<g>
+	<g>
+		<g>
+			<radialGradient id="SVGID_1_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path class="st0" d="M30.5,48.5c0.6,1.1,1.6,2.1,2.8,2.3c0.6,0.1,1.3,0.1,1.9,0.2c0.2,0,0.8,0.1,1,0c0.4-0.2,0.6-1.7,0.7-2.1     c0.3-1.4,0.2-2.5-0.7-3.7c-0.3-0.4-2.1-2.5-2.5-1.8c-0.2,0.3,0.6,0.9,0.8,1.2c0.5,0.5,0.9,1.1,1.2,1.8c0.5,1.2,0.1,2.3-0.2,3.5     c-1-0.1-2.1,0-3-0.6c-1-0.7-1.6-1.7-2.1-2.8c-0.1-0.2-0.2-0.4-0.5-0.3c-0.2,0.1-0.1,0.4-0.1,0.7C30,47.4,30.2,48,30.5,48.5z"></path>
+			
+				<radialGradient id="SVGID_00000154407033101711297270000011964349072587357085_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000154407033101711297270000011964349072587357085_);" d="M35.2,29.5c0.1,0.6,1.1-0.1,1.3-0.2     c0.7-0.3,1.4-0.5,2.1-0.6c1.3-0.1,2.2,0.6,3.3,1.2c-0.4,1-0.7,2-1.5,2.7c-1,0.7-2.1,0.9-3.3,1.2c-0.2,0-0.5,0.1-0.4,0.4     c0.1,0.3,0.4,0.3,0.6,0.3c0.6,0,1.2,0,1.8-0.1c1.2-0.2,2.3-0.8,3-1.8c0.3-0.6,0.6-1.3,0.8-1.9c0.1-0.2,0.3-0.6,0.3-0.9     c0-0.2,0.1-0.1,0-0.2c-0.1-0.1-0.3-0.2-0.4-0.3c-0.4-0.3-0.8-0.5-1.2-0.8c-0.6-0.3-1.1-0.7-1.8-0.8c-0.6-0.1-1.3,0-1.9,0.2     c-0.5,0.2-1,0.4-1.5,0.7C36.2,28.5,35.1,29.1,35.2,29.5z"></path>
+			<path class="st2" d="M37.8,32.6c0.5-0.1,1-0.3,1.2-0.7c0.1-0.2,0.2-0.4,0.3-0.6c0-0.1,0.2-0.5,0.2-0.6c0-0.1-0.3-0.2-0.4-0.3     c-0.2-0.1-0.4-0.3-0.6-0.4c-0.5-0.2-1.1-0.1-1.5,0.1c-0.2,0.1-0.8,0.3-0.9,0.6c-0.1,0.3,0.2,0.8,0.3,1c0.1,0.2,0.1,0.8,0.4,1     C37,32.8,37.6,32.7,37.8,32.6z"></path>
+			<path class="st2" d="M36.1,40.1c0.1,0.2,0.7,0.5,0.9,0.5c0.5,0.2,1,0.3,1.5,0.1c0.2-0.1,0.4-0.2,0.6-0.4c0.1-0.1,0.4-0.2,0.4-0.3     c0-0.1-0.2-0.4-0.2-0.5c-0.1-0.2-0.1-0.4-0.3-0.6c-0.3-0.4-0.8-0.6-1.2-0.7c-0.2,0-0.9-0.2-1.1-0.1c-0.3,0.1-0.3,0.7-0.4,1     C36.3,39.3,36,39.8,36.1,40.1z"></path>
+			
+				<radialGradient id="SVGID_00000103254821849259077710000004600973418802015360_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000103254821849259077710000004600973418802015360_);" d="M27.5,23.9c0.2,0,0.3-0.3,0.4-0.5     c0.2-0.5,0.3-1.1,0.4-1.7c0.2-1.3,0-2.6-0.9-3.6c-0.4-0.5-0.9-0.9-1.4-1.2c-0.2-0.2-0.5-0.5-0.8-0.6c-0.2-0.1-0.1-0.1-0.2,0     c-0.1,0-0.3,0.2-0.4,0.3c-0.4,0.3-0.8,0.6-1.2,1c-1,0.9-1.6,1.8-1.6,3.2c0,0.6,0.1,1.2,0.2,1.7c0.1,0.3,0.2,1.3,0.6,1.4     c0.7,0.2,0.3-1.1,0.2-1.3c-0.1-0.7-0.1-1.5,0.1-2.2c0.3-1.3,1.2-1.9,2.2-2.7c0.8,0.7,1.7,1.2,2.1,2.3c0.2,0.6,0.3,1.2,0.3,1.8     c0,0.6-0.2,1.2-0.2,1.8C27.1,23.7,27.2,23.9,27.5,23.9z"></path>
+			<path class="st2" d="M17.3,23.1c-0.2-0.1-0.5,0-0.7,0c-0.1,0-0.4-0.1-0.5,0c-0.1,0.1-0.1,0.4-0.2,0.5c-0.1,0.2-0.1,0.4-0.2,0.7     c0,0.5,0.2,1,0.5,1.3c0.2,0.2,0.6,0.7,0.8,0.7c0.3,0,0.7-0.4,0.9-0.6c0.2-0.2,0.8-0.4,0.8-0.7c0-0.2-0.3-0.8-0.4-1     C18.2,23.6,17.8,23.2,17.3,23.1z"></path>
+			<path class="st2" d="M31.2,45.7c0,0.2,0.3,0.8,0.4,1c0.3,0.4,0.6,0.8,1.1,1c0.2,0.1,0.5,0,0.7,0c0.1,0,0.4,0.1,0.5,0     c0.1-0.1,0.1-0.4,0.2-0.5c0.1-0.2,0.1-0.4,0.2-0.7c0-0.5-0.2-1-0.5-1.3c-0.2-0.2-0.6-0.7-0.8-0.7c-0.3,0-0.7,0.4-0.9,0.6     C31.8,45.2,31.3,45.4,31.2,45.7z"></path>
+			<path class="st2" d="M25.4,20.4c-0.1-0.1-0.3-0.3-0.4-0.3c-0.1,0-0.3,0.3-0.4,0.3c-0.2,0.1-0.4,0.3-0.5,0.4     c-0.3,0.4-0.4,0.9-0.4,1.4c0,0.3,0.1,0.9,0.2,1.1c0.2,0.2,0.8,0,1.1,0.1c0.3,0,0.8,0.1,1.1-0.1c0.2-0.2,0.2-0.8,0.2-1.1     c0-0.5,0-1.1-0.4-1.4C25.8,20.7,25.6,20.5,25.4,20.4z"></path>
+			<path class="st2" d="M32.9,26.3c0.3,0,0.7-0.5,0.8-0.7c0.3-0.4,0.6-0.9,0.6-1.4c0-0.2-0.1-0.4-0.2-0.7c0-0.1-0.1-0.4-0.2-0.5     c-0.1-0.1-0.4,0-0.5,0c-0.2,0-0.5,0-0.7,0c-0.5,0.1-0.9,0.5-1.1,0.9c-0.1,0.2-0.5,0.8-0.4,1c0,0.3,0.6,0.5,0.8,0.7     C32.2,25.9,32.6,26.4,32.9,26.3z"></path>
+			
+				<radialGradient id="SVGID_00000010286669251721514480000001243953501997946753_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000010286669251721514480000001243953501997946753_);" d="M43.3,41.4c0.2-0.4-0.5-1.7-0.7-2.1     c-0.5-1.2-1.2-2.1-2.5-2.5c-0.5-0.2-1.1-0.3-1.6-0.4c-0.3,0-1.5-0.2-1.7,0.2c-0.3,0.5,1,0.5,1.2,0.6c0.7,0.1,1.4,0.4,2.1,0.7     c1.2,0.7,1.5,1.8,1.9,3c-0.9,0.6-1.7,1.2-2.8,1.3c-1.2,0-2.3-0.5-3.3-1c-0.2-0.1-0.4-0.2-0.6,0.1c-0.1,0.3,0.2,0.4,0.3,0.6     c0.5,0.4,1,0.7,1.6,1c1.1,0.5,2.5,0.7,3.6,0.2c0.6-0.3,1.1-0.6,1.7-1C42.6,41.9,43.1,41.6,43.3,41.4z"></path>
+			
+				<radialGradient id="SVGID_00000181067907105024516690000016068262112663943592_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000181067907105024516690000016068262112663943592_);" d="M16.3,27.4c0.2-0.3-0.6-0.9-0.8-1.2     c-0.5-0.5-0.9-1.1-1.2-1.8c-0.5-1.2-0.1-2.3,0.2-3.5c1,0.1,2.1,0,3,0.6c1,0.7,1.6,1.7,2.1,2.8c0.1,0.2,0.2,0.4,0.5,0.3     c0.2-0.1,0.1-0.4,0.1-0.7c-0.2-0.6-0.4-1.2-0.7-1.7c-0.6-1.1-1.6-2.1-2.8-2.3c-0.6-0.1-1.3-0.1-1.9-0.2c-0.2,0-0.8-0.1-1,0     c-0.4,0.2-0.6,1.7-0.7,2.1c-0.3,1.4-0.2,2.5,0.7,3.7C14.1,25.9,15.9,28,16.3,27.4z"></path>
+			<path class="st2" d="M17.1,44.5c-0.3,0-0.7,0.5-0.8,0.7c-0.3,0.4-0.6,0.9-0.6,1.4c0,0.2,0.1,0.4,0.2,0.7c0,0.1,0.1,0.4,0.2,0.5     c0.1,0.1,0.4,0,0.5,0c0.2,0,0.5,0,0.7,0c0.5-0.1,0.9-0.5,1.1-0.9c0.1-0.2,0.5-0.8,0.4-1c0-0.3-0.6-0.5-0.8-0.7     C17.8,44.9,17.4,44.4,17.1,44.5z"></path>
+			<path class="st2" d="M13.3,38.1c-0.2-0.1-0.8,0-1,0.1c-0.5,0.1-1,0.3-1.2,0.7c-0.1,0.2-0.2,0.4-0.3,0.6c0,0.1-0.2,0.5-0.2,0.6     c0,0.1,0.3,0.2,0.4,0.3c0.2,0.1,0.4,0.3,0.6,0.4c0.5,0.2,1.1,0.1,1.5-0.1c0.2-0.1,0.8-0.3,0.9-0.6c0.1-0.3-0.2-0.8-0.3-1     C13.5,38.8,13.5,38.2,13.3,38.1z"></path>
+			
+				<radialGradient id="SVGID_00000050664276859671331330000001672516915397852304_" cx="25.0237" cy="35.4018" r="22.086" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1423" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4389" style="stop-color:#F7B222"></stop>
+				<stop offset="0.861" style="stop-color:#F27428"></stop>
+				<stop offset="1" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000050664276859671331330000001672516915397852304_);" d="M34.7,36.2c0.3-4.1-1.9-7.9-5.6-9.6     c-4.2-1.9-9.4-0.6-12,3.2c-2.3,3.3-2.3,7.9,0,11.2c2.3,3.3,6.6,4.9,10.5,3.8C31.5,43.7,34.4,40.2,34.7,36.2z"></path>
+			
+				<radialGradient id="SVGID_00000101091754660425013560000002410968221635143306_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000101091754660425013560000002410968221635143306_);" d="M22.6,46.9c-0.2,0-0.3,0.3-0.4,0.5     c-0.2,0.5-0.3,1.1-0.4,1.7c-0.2,1.3,0,2.6,0.9,3.6c0.4,0.5,0.9,0.9,1.4,1.2c0.2,0.2,0.5,0.5,0.8,0.6c0.2,0.1,0.1,0.1,0.2,0     c0.1,0,0.3-0.2,0.4-0.3c0.4-0.3,0.8-0.6,1.2-1c1-0.9,1.6-1.8,1.6-3.2c0-0.6-0.1-1.2-0.2-1.7c-0.1-0.3-0.2-1.3-0.6-1.4     c-0.7-0.2-0.3,1.1-0.2,1.3c0.1,0.7,0.1,1.5-0.1,2.2c-0.3,1.3-1.2,1.9-2.2,2.7c-0.8-0.7-1.7-1.2-2.1-2.3c-0.2-0.6-0.3-1.2-0.3-1.8     c0-0.6,0.2-1.2,0.2-1.8C22.9,47.1,22.8,46.9,22.6,46.9z"></path>
+			<path class="st2" d="M24.6,50.4c0.1,0.1,0.3,0.3,0.4,0.3c0.1,0,0.3-0.3,0.4-0.3c0.2-0.1,0.4-0.3,0.5-0.4c0.3-0.4,0.4-0.9,0.4-1.4     c0-0.3-0.1-0.9-0.2-1.1c-0.2-0.2-0.8,0-1.1-0.1c-0.3,0-0.8-0.1-1.1,0.1c-0.2,0.2-0.2,0.8-0.2,1.1c0,0.5,0,1.1,0.4,1.4     C24.2,50.1,24.4,50.3,24.6,50.4z"></path>
+			
+				<radialGradient id="SVGID_00000042730273367449011360000003552282039440994448_" cx="23.7118" cy="32.7717" r="40.5613" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000042730273367449011360000003552282039440994448_);" d="M14.5,41.2c-0.1-0.5-1,0.1-1.2,0.2     c-0.6,0.3-1.3,0.5-1.9,0.6c-1.2,0.1-2.1-0.5-3.1-1.2c0.4-0.9,0.6-1.9,1.4-2.5c0.9-0.7,2-0.9,3.1-1.1c0.2,0,0.4-0.1,0.4-0.4     c-0.1-0.3-0.4-0.2-0.6-0.2c-0.6,0-1.1,0-1.7,0.1C9.7,37,8.6,37.5,8,38.5c-0.3,0.5-0.5,1.2-0.8,1.7C7.2,40.5,7,40.8,7,41.1     c0,0.2-0.1,0.1,0,0.2c0.1,0.1,0.3,0.2,0.3,0.3c0.3,0.3,0.7,0.5,1.1,0.7c0.5,0.3,1,0.6,1.7,0.8c0.6,0.1,1.2,0,1.8-0.1     c0.5-0.1,1-0.4,1.4-0.6C13.6,42.1,14.5,41.6,14.5,41.2z"></path>
+			<path class="st2" d="M13.9,30.7c-0.1-0.2-0.7-0.5-0.9-0.5c-0.5-0.2-1-0.3-1.5-0.1c-0.2,0.1-0.4,0.2-0.6,0.4     c-0.1,0.1-0.4,0.2-0.4,0.3c0,0.1,0.2,0.4,0.2,0.5c0.1,0.2,0.1,0.4,0.3,0.6c0.3,0.4,0.8,0.6,1.2,0.7c0.2,0,0.9,0.2,1.1,0.1     c0.3-0.1,0.3-0.7,0.4-1C13.7,31.5,14,31,13.9,30.7z"></path>
+			
+				<radialGradient id="SVGID_00000137833241498452922580000000135044596888573076_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000137833241498452922580000000135044596888573076_);" d="M6.8,29.4c-0.2,0.4,0.5,1.7,0.7,2.1     C8,32.7,8.7,33.5,10,34c0.5,0.2,1.1,0.3,1.6,0.4c0.3,0,1.5,0.2,1.7-0.2c0.3-0.5-1-0.5-1.2-0.6c-0.7-0.1-1.4-0.4-2.1-0.7     c-1.2-0.7-1.5-1.8-1.9-3c0.9-0.6,1.7-1.2,2.8-1.3c1.2,0,2.3,0.5,3.3,1c0.2,0.1,0.4,0.2,0.6-0.1c0.1-0.3-0.2-0.4-0.3-0.6     c-0.5-0.4-1-0.7-1.6-1c-1.1-0.5-2.5-0.7-3.6-0.2c-0.6,0.3-1.1,0.6-1.7,1C7.4,28.9,6.9,29.2,6.8,29.4z"></path>
+			
+				<radialGradient id="SVGID_00000055688872149246969780000008324023394983429781_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000055688872149246969780000008324023394983429781_);" d="M19,49.3c0.3-0.4,0.6-0.9,0.8-1.4     c0.1-0.3,0.7-1.3,0.3-1.6c-0.4-0.4-0.8,0.8-0.9,1c-0.4,0.6-0.8,1.2-1.3,1.7c-1,0.9-2.1,0.8-3.4,0.9c-0.3-1-0.7-2-0.3-3.1     c0.3-1.1,1.1-2,1.9-2.8c0.2-0.1,0.3-0.3,0.2-0.5c-0.1-0.3-0.4-0.2-0.6-0.1c-0.5,0.3-1,0.7-1.4,1.1c-0.8,0.9-1.5,2.1-1.4,3.3     c0.1,0.7,0.3,1.4,0.4,2c0.1,0.3,0.1,0.7,0.3,0.9c0.1,0.2,0,0.1,0.1,0.2c0.1,0,0.3,0,0.5,0c0.5,0,0.9,0,1.4-0.1     c0.7-0.1,1.3-0.1,1.9-0.4C18.1,50.2,18.6,49.8,19,49.3z"></path>
+			
+				<radialGradient id="SVGID_00000049910217020301763810000002273115901448986790_" cx="24.7894" cy="32.2311" r="43.7585" gradientUnits="userSpaceOnUse">
+				<stop offset="0" style="stop-color:#FEE900"></stop>
+				<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+				<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+				<stop offset="0.8524" style="stop-color:#F27428"></stop>
+				<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+			</radialGradient>
+			<path style="fill:url(#SVGID_00000049910217020301763810000002273115901448986790_);" d="M31,21.5c-0.3,0.4-0.6,0.9-0.8,1.4     c-0.1,0.3-0.7,1.3-0.3,1.6c0.4,0.4,0.8-0.8,0.9-1c0.4-0.6,0.8-1.2,1.3-1.7c1-0.9,2.1-0.8,3.4-0.9c0.3,1,0.7,2,0.3,3.1     c-0.3,1.1-1.1,2-1.9,2.8c-0.2,0.1-0.3,0.3-0.2,0.5c0.1,0.3,0.4,0.2,0.6,0.1c0.5-0.3,1-0.7,1.4-1.1c0.8-0.9,1.5-2.1,1.4-3.3     c-0.1-0.7-0.3-1.4-0.4-2c-0.1-0.3-0.1-0.7-0.3-0.9c-0.1-0.2,0-0.1-0.1-0.2c-0.1,0-0.3,0-0.5,0c-0.5,0-0.9,0-1.4,0.1     c-0.7,0.1-1.3,0.1-1.9,0.4C31.9,20.6,31.4,21,31,21.5z"></path>
+			<g>
+				<path class="st12" d="M39.2,46.1c0.3,0.3,0.7,0.5,1,0.8c0.3,0.2,0.5,0.4,0.8,0.6c0.2,0.2,0.6,0.5,0.9,0.2      c0.2-0.3-0.2-0.6-0.5-0.8c-0.2-0.2-0.5-0.4-0.8-0.6c-0.4-0.3-0.7-0.5-1.1-0.7c-0.2-0.1-0.5-0.3-0.7-0.1      C38.7,45.7,39,45.9,39.2,46.1z"></path>
+				
+					<radialGradient id="SVGID_00000106117456816385300800000000345549073826277048_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000106117456816385300800000000345549073826277048_);" d="M45,44c0.5-0.3,0.9-0.6,1.4-0.9      c0.2-0.1,0.6-0.3,0.7-0.5c0.1-0.2,0-0.4-0.1-0.6c-0.2-0.5-0.3-0.9-0.5-1.4c-0.3-1-0.6-1.9-1.5-2.5c-0.3-0.2-2.2-1.3-2.1-0.3      c0,0.2,0.1,0.2,0.3,0.3c0.2,0.1,0.4,0.2,0.5,0.3c0.4,0.3,0.8,0.7,1,1.1c0.1,0.3,0.2,0.6,0.3,0.9c0.1,0.3,0.2,0.5,0.2,0.8      c0.1,0.2,0.2,0.6,0.2,0.7c-0.1,0.2-0.3,0.3-0.5,0.4c-0.2,0.2-0.4,0.3-0.6,0.4c-0.2,0.2-0.5,0.4-0.8,0.5      c-0.4,0.2-0.8,0.4-1.2,0.4c-0.4,0-0.8,0-1.2-0.1c-0.4,0-0.5,0.5-0.2,0.7c0.4,0.2,0.8,0.3,1.3,0.4C43.3,44.9,44.2,44.6,45,44z"></path>
+				<path class="st12" d="M41.7,23c-0.3,0.2-0.5,0.4-0.8,0.6c-0.3,0.3-0.7,0.5-1,0.8c-0.2,0.1-0.5,0.3-0.3,0.6      c0.2,0.2,0.5,0,0.7-0.1c0.4-0.2,0.7-0.5,1.1-0.7c0.3-0.2,0.5-0.4,0.8-0.6c0.2-0.2,0.6-0.4,0.5-0.8C42.3,22.5,41.9,22.8,41.7,23z      "></path>
+				<path class="st12" d="M44.9,35.1c-0.4,0-0.8,0-1.3,0c-0.2,0-0.5,0-0.5,0.3c0,0.3,0.3,0.3,0.5,0.3c0.4,0,0.8,0,1.3,0      c0.3,0,0.7,0,1.1,0c0.3,0,0.8,0,0.8-0.3c-0.1-0.4-0.5-0.3-0.8-0.3C45.6,35.1,45.3,35.1,44.9,35.1z"></path>
+				
+					<radialGradient id="SVGID_00000160153118150285972510000013143573701412273597_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000160153118150285972510000013143573701412273597_);" d="M43,26c-0.5,0-0.9,0-1.4,0.2      c-0.3,0.1-0.9,0.3-0.8,0.7c0.2,0.4,0.7,0.2,1.1,0.2c0.5,0,1.1,0.1,1.6,0.3c0.3,0.1,0.6,0.3,0.8,0.5c0.2,0.2,0.4,0.3,0.6,0.5      c0.2,0.1,0.5,0.3,0.6,0.5c0.1,0.2-0.1,0.4-0.1,0.6c-0.1,0.2-0.1,0.5-0.2,0.7c-0.1,0.3-0.2,0.6-0.3,0.9c-0.3,0.8-1,1.4-1.7,1.7      c-0.1,0.1-0.2,0.1-0.2,0.2c0,0.2,0.1,0.4,0.3,0.5c0.2,0,0.4-0.1,0.5-0.1c0.2-0.1,0.5-0.1,0.7-0.3c0.9-0.4,1.5-1.2,1.8-2.1      c0.2-0.5,0.4-1,0.5-1.6c0.1-0.3,0.3-0.7,0.4-1c0.1-0.2-0.1-0.3-0.3-0.4c-0.4-0.2-0.8-0.5-1.1-0.8C44.8,26.7,44.1,26.1,43,26z"></path>
+				<path class="st12" d="M7.5,22.2c-0.2-0.2-0.6-0.5-0.9-0.2c-0.2,0.3,0.2,0.6,0.5,0.8c0.2,0.2,0.5,0.4,0.8,0.6      c0.4,0.3,0.7,0.5,1.1,0.7c0.2,0.1,0.5,0.3,0.7,0.1c0.2-0.2-0.1-0.5-0.3-0.6"></path>
+				<path class="st12" d="M4.5,35.5c-0.3,0-0.7,0-1.1,0c-0.3,0-0.8,0-0.8,0.3c0.1,0.4,0.5,0.3,0.8,0.3c0.3,0,0.7,0,1.1,0      c0.4,0,0.8,0,1.3,0c0.2,0,0.5,0,0.5-0.3c0-0.3-0.3-0.3-0.5-0.3C5.3,35.5,4.9,35.5,4.5,35.5z"></path>
+				<path class="st12" d="M8.6,47.8c0.3-0.2,0.5-0.4,0.8-0.6c0.3-0.3,0.7-0.5,1-0.8c0.2-0.1,0.5-0.3,0.3-0.6c-0.2-0.2-0.5,0-0.7,0.1      c-0.4,0.2-0.7,0.5-1.1,0.7c-0.3,0.2-0.5,0.4-0.8,0.6c-0.2,0.2-0.6,0.4-0.5,0.8C8,48.3,8.3,48,8.6,47.8z"></path>
+				
+					<radialGradient id="SVGID_00000080899195914306108990000010862581822994219450_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000080899195914306108990000010862581822994219450_);" d="M7,44.8c0.5,0,0.9,0,1.4-0.2      c0.3-0.1,0.9-0.3,0.8-0.7c-0.2-0.4-0.7-0.2-1.1-0.2c-0.5,0-1.1-0.1-1.6-0.3c-0.3-0.1-0.6-0.3-0.8-0.5c-0.2-0.2-0.4-0.3-0.6-0.5      c-0.2-0.1-0.5-0.3-0.6-0.5c-0.1-0.2,0.1-0.4,0.1-0.6c0.1-0.2,0.1-0.5,0.2-0.7c0.1-0.3,0.2-0.6,0.3-0.9c0.3-0.8,1-1.4,1.7-1.7      C7,38,7.1,38,7.1,37.8c0-0.2-0.1-0.4-0.3-0.5c-0.2,0-0.4,0.1-0.5,0.1c-0.2,0.1-0.5,0.1-0.7,0.3c-0.9,0.4-1.5,1.2-1.8,2.1      c-0.2,0.5-0.4,1-0.5,1.6c-0.1,0.3-0.3,0.7-0.4,1c-0.1,0.2,0.1,0.3,0.3,0.4c0.4,0.2,0.8,0.5,1.1,0.8C5.2,44.1,5.9,44.7,7,44.8z"></path>
+				
+					<radialGradient id="SVGID_00000112621452608806157500000004068854807312278420_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000112621452608806157500000004068854807312278420_);" d="M5,26.8c-0.5,0.3-0.9,0.6-1.4,0.9      c-0.2,0.1-0.6,0.3-0.7,0.5c-0.1,0.2,0,0.4,0.1,0.6c0.2,0.5,0.3,0.9,0.5,1.4c0.3,1,0.6,1.9,1.5,2.5C5.3,33,7.2,34,7.1,33      c0-0.2-0.1-0.2-0.3-0.3c-0.2-0.1-0.4-0.2-0.5-0.3c-0.4-0.3-0.8-0.7-1-1.1C5.1,31,5,30.7,4.9,30.3c-0.1-0.3-0.2-0.5-0.2-0.8      c-0.1-0.2-0.2-0.6-0.2-0.7c0.1-0.2,0.3-0.3,0.5-0.4c0.2-0.2,0.4-0.3,0.6-0.4c0.2-0.2,0.5-0.4,0.8-0.5c0.4-0.2,0.8-0.4,1.2-0.4      c0.4,0,0.8,0,1.2,0.1c0.4,0,0.5-0.5,0.2-0.7C8.6,26.2,8.2,26,7.7,26C6.7,25.9,5.8,26.2,5,26.8z"></path>
+				<path class="st12" d="M19.3,52.4c-0.3-0.1-0.4,0.1-0.5,0.4c-0.2,0.4-0.3,0.8-0.4,1.2c-0.1,0.3-0.2,0.6-0.3,0.9      c-0.1,0.3-0.3,0.8,0.1,1c0.4,0.1,0.5-0.4,0.6-0.7c0.1-0.3,0.2-0.6,0.3-0.9c0.1-0.4,0.3-0.8,0.4-1.2      C19.5,52.9,19.6,52.5,19.3,52.4z"></path>
+				
+					<radialGradient id="SVGID_00000032642668326999211230000008604416885578212762_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000032642668326999211230000008604416885578212762_);" d="M28.2,53.3c-0.3,0.1-0.3,0.7-0.4,1      c-0.1,0.5-0.4,1-0.8,1.4c-0.2,0.2-0.5,0.4-0.8,0.6c-0.2,0.2-0.4,0.3-0.7,0.5c-0.2,0.1-0.5,0.4-0.7,0.4c-0.2,0-0.4-0.2-0.5-0.3      c-0.2-0.1-0.4-0.3-0.6-0.4c-0.3-0.2-0.5-0.4-0.7-0.6c-0.7-0.5-1-1.3-1.1-2.2c0-0.2,0-0.2-0.2-0.3c-0.2-0.1-0.4,0-0.5,0.2      c-0.2,0.4-0.1,0.9,0,1.3c0.2,1,0.7,1.8,1.5,2.4c0.5,0.3,0.9,0.7,1.4,1c0.2,0.2,0.5,0.4,0.7,0.6c0.2,0.1,0.4-0.1,0.5-0.2      c0.4-0.3,0.8-0.6,1.2-0.9c0.8-0.6,1.6-1.2,2-2.2C28.7,55,29.1,53,28.2,53.3z"></path>
+				
+					<radialGradient id="SVGID_00000075128332174997572410000016835427581692176050_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000075128332174997572410000016835427581692176050_);" d="M16.4,53.4c0.3-0.2,1.9-1.7,0.9-1.9      c-0.2,0-0.3,0.1-0.4,0.2c-0.1,0.2-0.3,0.3-0.5,0.4c-0.4,0.3-0.9,0.5-1.4,0.6c-0.3,0-0.7,0-1,0c-0.3,0-0.5,0-0.8,0      c-0.2,0-0.6,0-0.8-0.1c-0.1-0.1-0.2-0.4-0.3-0.6c-0.1-0.2-0.2-0.5-0.2-0.7c-0.1-0.3-0.2-0.6-0.3-0.9c-0.1-0.5-0.1-0.9,0-1.4      c0.1-0.4,0.3-0.8,0.5-1.1c0.1-0.3-0.3-0.6-0.6-0.4c-0.3,0.3-0.6,0.7-0.8,1.1c-0.5,1-0.4,1.9-0.1,2.9c0.2,0.5,0.3,1.1,0.5,1.6      c0.1,0.2,0.1,0.6,0.2,0.8c0.1,0.2,0.4,0.1,0.6,0.1c0.5,0,1,0,1.5,0C14.5,54,15.5,54,16.4,53.4z"></path>
+				
+					<radialGradient id="SVGID_00000003098802169846941500000007961247846503570820_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000003098802169846941500000007961247846503570820_);" d="M39.5,49.4c-0.1-0.5-0.3-0.9-0.6-1.3      c-0.2-0.3-0.5-0.8-0.9-0.5c-0.4,0.3,0,0.7,0.2,1c0.2,0.5,0.3,1.1,0.2,1.6c-0.1,0.3-0.2,0.7-0.3,1c-0.1,0.2-0.2,0.5-0.2,0.7      c-0.1,0.2-0.1,0.6-0.3,0.7c-0.1,0.1-0.5,0.1-0.6,0.1c-0.2,0-0.5,0-0.7,0c-0.3,0-0.6,0-0.9,0c-0.9-0.1-1.6-0.5-2.2-1.1      c-0.1-0.1-0.1-0.2-0.3-0.1c-0.2,0-0.4,0.2-0.4,0.4c0,0.4,0.5,0.8,0.7,1.1c0.7,0.7,1.6,1.1,2.6,1.1c0.6,0,1.1,0,1.7,0      c0.3,0,0.7,0.1,1,0.1c0.3,0,0.3-0.2,0.3-0.4c0.1-0.4,0.2-0.8,0.3-1.2C39.3,51.5,39.7,50.5,39.5,49.4z"></path>
+				<path class="st12" d="M31.2,54c-0.1-0.4-0.3-0.8-0.4-1.2c-0.1-0.2-0.2-0.5-0.5-0.4c-0.2,0.1-0.1,0.4-0.1,0.6      c0.1,0.4,0.2,0.8,0.4,1.2c0.1,0.3,0.2,0.6,0.3,0.9c0.1,0.3,0.2,0.7,0.6,0.7c0.3-0.2,0.1-0.7,0.1-1C31.4,54.6,31.3,54.3,31.2,54z      "></path>
+				
+					<radialGradient id="SVGID_00000176028892245334118690000001041051165280644790_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000176028892245334118690000001041051165280644790_);" d="M21.8,17.5c0.3-0.1,0.3-0.7,0.4-1      c0.1-0.5,0.4-1,0.8-1.4c0.2-0.2,0.5-0.4,0.8-0.6c0.2-0.2,0.4-0.3,0.7-0.5c0.2-0.1,0.5-0.4,0.7-0.4c0.2,0,0.4,0.2,0.5,0.3      c0.2,0.1,0.4,0.3,0.6,0.4c0.3,0.2,0.5,0.4,0.7,0.6c0.7,0.5,1,1.3,1.1,2.2c0,0.2,0,0.2,0.2,0.3c0.2,0.1,0.4,0,0.5-0.2      c0.2-0.4,0.1-0.9,0-1.3c-0.2-1-0.7-1.8-1.5-2.4c-0.5-0.3-0.9-0.7-1.4-1c-0.2-0.2-0.5-0.4-0.7-0.6c-0.2-0.1-0.4,0.1-0.5,0.2      c-0.4,0.3-0.8,0.6-1.2,0.9c-0.8,0.6-1.6,1.2-2,2.2C21.3,15.7,20.9,17.8,21.8,17.5z"></path>
+				<path class="st12" d="M30.6,17.8c0.3,0.1,0.4-0.1,0.5-0.4c0.2-0.4,0.3-0.8,0.4-1.2c0.1-0.3,0.2-0.6,0.3-0.9      c0.1-0.3,0.3-0.8-0.1-1c-0.4-0.1-0.5,0.4-0.6,0.7c-0.1,0.3-0.2,0.6-0.3,0.9c-0.1,0.4-0.3,0.8-0.4,1.2      C30.5,17.3,30.4,17.6,30.6,17.8z"></path>
+				
+					<radialGradient id="SVGID_00000009554342157848560850000012409163559322370735_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000009554342157848560850000012409163559322370735_);" d="M33.6,17.4c-0.3,0.2-1.9,1.7-0.9,1.9      c0.2,0,0.3-0.1,0.4-0.2c0.1-0.2,0.3-0.3,0.5-0.4c0.4-0.3,0.9-0.5,1.4-0.6c0.3,0,0.7,0,1,0c0.3,0,0.5,0,0.8,0      c0.2,0,0.6,0,0.8,0.1c0.1,0.1,0.2,0.4,0.3,0.6c0.1,0.2,0.2,0.5,0.2,0.7c0.1,0.3,0.2,0.6,0.3,0.9c0.1,0.5,0.1,0.9,0,1.4      c-0.1,0.4-0.3,0.8-0.5,1.1c-0.1,0.3,0.3,0.6,0.6,0.4c0.3-0.3,0.6-0.7,0.8-1.1c0.5-1,0.4-1.9,0.1-2.9c-0.2-0.5-0.3-1.1-0.5-1.6      c-0.1-0.2-0.1-0.6-0.2-0.8c-0.1-0.2-0.4-0.1-0.6-0.1c-0.5,0-1,0-1.5,0C35.5,16.7,34.5,16.7,33.6,17.4z"></path>
+				<path class="st12" d="M18.4,16.5c0.1,0.4,0.3,0.8,0.4,1.2c0.1,0.2,0.2,0.5,0.5,0.4c0.2-0.1,0.1-0.4,0.1-0.6      c-0.1-0.4-0.2-0.8-0.4-1.2c-0.1-0.3-0.2-0.6-0.3-0.9c-0.1-0.3-0.2-0.7-0.6-0.7c-0.3,0.2-0.1,0.7-0.1,1      C18.2,15.9,18.3,16.2,18.4,16.5z"></path>
+				
+					<radialGradient id="SVGID_00000170268472078675604130000000675364508828109696_" cx="24.8414" cy="33.1559" r="30.9577" gradientUnits="userSpaceOnUse">
+					<stop offset="0" style="stop-color:#FEE900"></stop>
+					<stop offset="0.1409" style="stop-color:#FCDA11"></stop>
+					<stop offset="0.4345" style="stop-color:#F7B222"></stop>
+					<stop offset="0.8524" style="stop-color:#F27428"></stop>
+					<stop offset="0.9901" style="stop-color:#F15A29"></stop>
+				</radialGradient>
+				<path style="fill:url(#SVGID_00000170268472078675604130000000675364508828109696_);" d="M10.5,21.4c0.1,0.5,0.3,0.9,0.6,1.3      c0.2,0.3,0.5,0.8,0.9,0.5c0.4-0.3,0-0.7-0.2-1c-0.2-0.5-0.3-1.1-0.2-1.6c0.1-0.3,0.2-0.7,0.3-1c0.1-0.2,0.2-0.5,0.2-0.7      c0.1-0.2,0.1-0.6,0.3-0.7C12.6,18,13,18,13.1,18c0.2,0,0.5,0,0.7,0c0.3,0,0.6,0,0.9,0c0.9,0.1,1.6,0.5,2.2,1.1      c0.1,0.1,0.1,0.2,0.3,0.1c0.2,0,0.4-0.2,0.4-0.4c0-0.4-0.5-0.8-0.7-1.1c-0.7-0.7-1.6-1.1-2.6-1.1c-0.6,0-1.1,0-1.7,0      c-0.3,0-0.7-0.1-1-0.1c-0.3,0-0.3,0.2-0.3,0.4c-0.1,0.4-0.2,0.8-0.3,1.2C10.7,19.3,10.3,20.3,10.5,21.4z"></path>
+			</g>
+		</g>
+		<path class="st12" d="M32.8,33.8c0-0.7-0.3-0.3-0.3-0.7c0.3,5.1-6.4,11.4-11.2,6.1c-3.6-4,0.5-10.5,5.4-7.7c1.5,0.9,1.9,3,0.9,4.4    c0,0,0,0.1,0,0C26.9,37,25,37.1,24,36.1c-1.3-1.3,0.2-3.8,1.9-2.9c0.9,0.4,1.1,1.5,0.6,2.2c0.1,0.6,0.7-0.5,0.7-0.8    c0.3-2.2-2.7-3.4-4.3-1.7c-1.4,1.3-1.3,3.8,0.2,5c4.5,3.6,9.6-2.3,6.7-6.9c-2.2-3.5-7.3-3.5-10.3-0.3c-2.9,3.1-2,8.5,1.4,10.8    C26.3,45,33.2,40.4,32.8,33.8z"></path>
+	</g>
+	<g>
+		<g>
+			<path class="st2" d="M103.1,47.2h2.4c0.6,0,1.2,0.2,1.5,0.5c0.2,0.2,0.4,0.5,0.4,0.9v0c0,0.7-0.5,1.1-0.9,1.3     c0.7,0.2,1.2,0.6,1.2,1.4v0c0,1-0.8,1.5-2.1,1.5h-2.5V47.2z M105.4,49.7c0.8,0,1.3-0.3,1.3-1v0c0-0.6-0.4-0.9-1.3-0.9h-1.7v1.9     H105.4z M105.6,52.3c0.9,0,1.4-0.4,1.4-1v0c0-0.6-0.5-1-1.5-1h-1.8v2H105.6z"></path>
+			<path class="st2" d="M108.2,50.8L108.2,50.8c0-1.2,0.9-2.2,2.2-2.2c1.3,0,2.2,1,2.2,2.2v0c0,1.2-0.9,2.2-2.2,2.2     C109.1,52.9,108.2,52,108.2,50.8z M112,50.8L112,50.8c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.5,0.7-1.5,1.6v0c0,0.9,0.7,1.6,1.5,1.6     C111.3,52.4,112,51.7,112,50.8z"></path>
+			<path class="st2" d="M113.2,50.8L113.2,50.8c0-1.4,1-2.2,2-2.2c0.8,0,1.3,0.4,1.6,0.9v-2.5h0.6v5.9h-0.6V52     c-0.3,0.5-0.8,0.9-1.6,0.9C114.1,52.9,113.2,52.1,113.2,50.8z M116.8,50.8L116.8,50.8c0-1-0.7-1.6-1.5-1.6     c-0.8,0-1.5,0.6-1.5,1.6v0c0,1,0.7,1.6,1.5,1.6C116,52.4,116.8,51.7,116.8,50.8z"></path>
+			<path class="st2" d="M118.2,54l0.2-0.5c0.2,0.1,0.4,0.2,0.7,0.2c0.4,0,0.6-0.2,0.9-0.8l-1.9-4.2h0.7l1.5,3.5l1.3-3.5h0.7     l-1.8,4.3c-0.4,0.9-0.8,1.2-1.4,1.2C118.7,54.2,118.5,54.1,118.2,54z"></path>
+			<path class="st2" d="M122.5,48.7h0.7l1.1,3.4l1.1-3.4h0.5L127,52l1.1-3.4h0.6l-1.5,4.2h-0.5l-1.1-3.3l-1.1,3.3h-0.5L122.5,48.7z"></path>
+			<path class="st2" d="M129,50.8L129,50.8c0-1.2,0.9-2.2,2.2-2.2c1.3,0,2.2,1,2.2,2.2v0c0,1.2-0.9,2.2-2.2,2.2     C129.9,52.9,129,52,129,50.8z M132.7,50.8L132.7,50.8c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.5,0.7-1.5,1.6v0c0,0.9,0.7,1.6,1.5,1.6     C132.1,52.4,132.7,51.7,132.7,50.8z"></path>
+			<path class="st2" d="M134.1,48.7h0.6v1.1c0.3-0.7,0.9-1.2,1.7-1.2v0.7h0c-0.9,0-1.7,0.7-1.7,1.9v1.7h-0.6V48.7z"></path>
+			<path class="st2" d="M137.1,46.9h0.6V51l2.3-2.4h0.8l-1.8,1.8l1.8,2.4h-0.7l-1.5-1.9l-0.8,0.9v1.1h-0.6V46.9z"></path>
+			<path class="st2" d="M143.7,49.2h-0.6v-0.5h0.6v-0.4c0-0.5,0.1-0.8,0.4-1.1c0.2-0.2,0.5-0.3,0.9-0.3c0.3,0,0.5,0,0.7,0.1v0.5     c-0.2-0.1-0.4-0.1-0.6-0.1c-0.5,0-0.7,0.3-0.7,0.9v0.3h1.3v0.5h-1.3v3.6h-0.6V49.2z"></path>
+			<path class="st2" d="M145.8,50.8L145.8,50.8c0-1.2,0.9-2.2,2.2-2.2c1.3,0,2.2,1,2.2,2.2v0c0,1.2-0.9,2.2-2.2,2.2     C146.7,52.9,145.8,52,145.8,50.8z M149.5,50.8L149.5,50.8c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.5,0.7-1.5,1.6v0c0,0.9,0.7,1.6,1.5,1.6     C148.9,52.4,149.5,51.7,149.5,50.8z"></path>
+			<path class="st2" d="M150.9,48.7h0.6v1.1c0.3-0.7,0.9-1.2,1.7-1.2v0.7h0c-0.9,0-1.7,0.7-1.7,1.9v1.7h-0.6V48.7z"></path>
+			<path class="st2" d="M155.7,47.2h0.7l1.6,4.7l1.6-4.7h0.5l1.6,4.7l1.6-4.7h0.7l-2,5.7h-0.5l-1.6-4.6l-1.6,4.6h-0.5L155.7,47.2z"></path>
+			<path class="st2" d="M163.8,50.8L163.8,50.8c0-1.2,0.9-2.2,2.2-2.2c1.3,0,2.2,1,2.2,2.2v0c0,1.2-0.9,2.2-2.2,2.2     C164.7,52.9,163.8,52,163.8,50.8z M167.6,50.8L167.6,50.8c0-0.9-0.7-1.6-1.6-1.6c-0.9,0-1.5,0.7-1.5,1.6v0c0,0.9,0.7,1.6,1.5,1.6     C166.9,52.4,167.6,51.7,167.6,50.8z"></path>
+			<path class="st2" d="M169,48.7h0.6v0.7c0.3-0.4,0.6-0.8,1.4-0.8c0.7,0,1.1,0.4,1.3,0.8c0.3-0.5,0.7-0.8,1.5-0.8     c1,0,1.6,0.6,1.6,1.7v2.6h-0.6v-2.4c0-0.8-0.4-1.3-1.1-1.3c-0.6,0-1.2,0.5-1.2,1.3v2.4h-0.6v-2.5c0-0.8-0.4-1.2-1.1-1.2     c-0.7,0-1.2,0.5-1.2,1.3v2.4H169V48.7z"></path>
+			<path class="st2" d="M178.2,52.4c0.6,0,1-0.2,1.3-0.6l0.4,0.3c-0.4,0.5-0.9,0.8-1.7,0.8c-1.1,0-2.1-0.9-2.1-2.2     c0-1.2,0.8-2.2,2-2.2c1.2,0,1.9,1,1.9,2.2c0,0.1,0,0.1,0,0.2h-3.3C176.8,51.9,177.5,52.4,178.2,52.4z M179.4,50.5     c-0.1-0.8-0.5-1.4-1.3-1.4c-0.7,0-1.3,0.6-1.4,1.4H179.4z"></path>
+			<path class="st2" d="M180.8,48.7h0.6v0.7c0.3-0.5,0.7-0.8,1.4-0.8c1,0,1.6,0.7,1.6,1.7v2.6h-0.6v-2.4c0-0.8-0.4-1.3-1.2-1.3     c-0.7,0-1.3,0.5-1.3,1.3v2.4h-0.6V48.7z"></path>
+		</g>
+	</g>
+	<g>
+		<path class="st12" d="M67.1,43.9c0,0.1,0,0.1-0.1,0.2c0,0-0.1,0.1-0.2,0.1h-1.6c-0.1,0-0.2-0.1-0.2-0.2c0-0.7,0-3.2-0.3-6.2    c0-0.1-0.1-0.2-0.2-0.2h-7.2c-0.1,0-0.2,0.1-0.2,0.2c-0.2,3-0.2,5.4-0.3,6.2c0,0.1-0.1,0.2-0.2,0.2H55c-0.1,0-0.1,0-0.2-0.1    c0,0-0.1-0.1-0.1-0.2c0-3.5,0.2-7,0.6-10.4c0.9-7.8,2.7-11.4,5.5-11.4c2.8,0,4.6,3.6,5.5,11.4C66.8,37,67,40.4,67.1,43.9z     M64.4,35.4c0,0,0.1-0.1,0.1-0.2c0-0.5-0.1-1-0.2-1.4c-1.1-9.1-3.1-9.6-3.4-9.6c-0.4,0-2.3,0.5-3.4,9.6c-0.1,0.5-0.1,1-0.2,1.4    c0,0.1,0,0.1,0.1,0.2c0,0,0.1,0.1,0.2,0.1h6.7C64.3,35.4,64.4,35.4,64.4,35.4z"></path>
+		<path class="st12" d="M92.3,22.4c0.1,0.1,0.1,0.2,0.1,0.4L85.5,44c-0.1,0.2-0.2,0.3-0.4,0.3h-1.3c-0.2,0-0.3-0.1-0.4-0.3l-0.1-0.2    h0l0,0l-3.3-10.1c-0.1-0.2-0.2-0.3-0.4-0.3c-0.2,0-0.3,0.1-0.4,0.3L76.1,44c-0.1,0.2-0.2,0.3-0.4,0.3h-1.3c-0.2,0-0.3-0.1-0.4-0.3    l-6.9-21.2c0-0.1,0-0.3,0.1-0.4c0.1-0.1,0.2-0.2,0.3-0.2h1.4c0.2,0,0.3,0.1,0.4,0.3l5.4,16.7c0.1,0.2,0.2,0.3,0.4,0.3    c0.2,0,0.3-0.1,0.4-0.3l3.3-10.4l0,0l0.1-0.2h1.7c0.2,0,0.3,0.1,0.4,0.3l3.3,10.3c0.1,0.2,0.2,0.3,0.4,0.3c0.2,0,0.3-0.1,0.4-0.3    l5.4-16.7c0.1-0.2,0.2-0.3,0.4-0.3H92C92.1,22.2,92.2,22.3,92.3,22.4z"></path>
+		<path class="st12" d="M104.2,43.9c0,0.1,0,0.1-0.1,0.2c0,0-0.1,0.1-0.2,0.1h-1.6c-0.1,0-0.2-0.1-0.2-0.2c0-0.7,0-3.2-0.3-6.2    c0-0.1-0.1-0.2-0.2-0.2h-7.2c-0.1,0-0.2,0.1-0.2,0.2C94,40.7,94,43.2,94,44c0,0.1-0.1,0.2-0.2,0.2h-1.6c-0.1,0-0.1,0-0.2-0.1    c0,0-0.1-0.1-0.1-0.2c0-3.5,0.2-7,0.6-10.4c0.9-7.8,2.7-11.4,5.5-11.4c2.8,0,4.6,3.6,5.5,11.4C104,37,104.2,40.5,104.2,43.9z     M101.4,35.5c0.1,0,0.1,0,0.2-0.1c0,0,0.1-0.1,0.1-0.2c0-0.5-0.1-1-0.2-1.4c-1.1-9.1-3.1-9.6-3.4-9.6s-2.3,0.5-3.4,9.6    c-0.1,0.5-0.1,1-0.2,1.4c0,0.1,0,0.1,0.1,0.2c0,0,0.1,0.1,0.2,0.1L101.4,35.5L101.4,35.5z"></path>
+		<path class="st12" d="M131.5,40.7c0.2,0.1,0.3,0.2,0.3,0.4v1.4c0,0.2-0.1,0.3-0.2,0.4c-1.3,0.7-3,1.3-5.5,1.3c-0.2,0-0.5,0-0.8,0    c-7-0.3-10.5-6-12.1-8.8l0-0.1c-0.1-0.1-0.1-0.2-0.3-0.2c-0.1,0-0.2,0-0.3,0.1c-1,0.8-2,1.6-3.2,2.2c-0.1,0.1-0.2,0.2-0.2,0.3v6.1    c0,0.1,0,0.2-0.1,0.3c-0.1,0.1-0.2,0.1-0.3,0.1h-1.4c-0.2,0-0.4-0.2-0.4-0.4V22.4c0-0.2,0.2-0.4,0.4-0.4h1.4c0.1,0,0.2,0,0.3,0.1    c0.1,0.1,0.1,0.2,0.1,0.3v12c0,0.1,0.1,0.3,0.2,0.3c0.1,0.1,0.3,0.1,0.4,0c3.4-2.5,7.4-7.1,7.6-12.2c0-0.2,0.2-0.3,0.4-0.4h1.4    c0.1,0,0.2,0,0.3,0.1c0.1,0.1,0.1,0.2,0.1,0.3c-0.1,2.8-1.5,7.1-4.8,10.8c-0.1,0.1-0.1,0.3,0,0.4c0.1,0.2,0.2,0.4,0.4,0.6    c1.6,2.6,4.5,7.5,10.5,7.7c2.8,0.1,4.6-0.6,5.6-1.4C131.1,40.6,131.3,40.6,131.5,40.7z M122.6,37c-1-1-1.5-2.3-1.5-3.6    c0-1.8,0.5-3.2,1.6-4.2c0.2-0.2,0.5-0.4,0.7-0.5c0.1-0.1,0.1-0.1,0.2-0.2c0-0.1,0-0.2-0.1-0.3c-0.2-0.2-0.4-0.5-0.5-0.8    c-0.5-0.9-0.5-2-0.1-2.9c0.6-1.6,2-2.6,3.6-2.5c1.5,0,2.9,1,3.4,2.4c0,0.1,0,0.2,0,0.3c0,0.1-0.1,0.2-0.2,0.2l-1.3,0.4    c-0.2,0.1-0.4,0-0.4-0.2c-0.3-0.6-0.8-1-1.5-1c-0.7,0-1.3,0.4-1.6,1.2c-0.2,0.4-0.2,0.9,0,1.2c0.4,0.7,1.3,1.2,1.8,1.4    c0.2,0.1,0.3,0.2,0.2,0.4l-0.3,1.4c0,0.2-0.2,0.3-0.3,0.3c-0.5,0-1.5,0.2-2.2,0.8c-0.6,0.6-0.9,1.5-0.9,2.7c0,0.8,0.3,1.6,0.9,2.1    c0.6,0.6,1.5,1,2.3,1c1.1,0,1.9-0.4,2.5-1c0.5-0.5,0.7-1.2,0.7-2c0-0.2,0.1-0.3,0.3-0.4l1.4-0.2c0.1,0,0.2,0,0.3,0.1    c0.1,0.1,0.1,0.2,0.1,0.3c0.1,1.3-0.4,2.6-1.2,3.6c-1,1.1-2.4,1.8-4.1,1.8C125,38.6,123.6,38.1,122.6,37z"></path>
+		<path class="st12" d="M147.4,22.2c0,0,0.1,0.1,0.1,0.2v21.4c0,0.1-0.1,0.2-0.2,0.2l-0.6,0.2c-0.1,0-0.2,0-0.3,0    c-0.6,0-0.9-0.5-1.1-0.9c0,0,0-0.1-0.1-0.1c-0.1-0.1-0.1-0.2-2.7-4.9c-1.5-2.7-3.3-6.1-4.8-8.8l-0.2-0.4l-0.6-1    c-0.1-0.1-0.2-0.1-0.3-0.1c-0.1,0-0.2,0.1-0.2,0.2v15.8c0,0.1-0.1,0.2-0.2,0.2h-1.6c-0.1,0-0.2-0.1-0.2-0.2V22.5    c0-0.1,0.1-0.2,0.2-0.2l0.6-0.2c0.8-0.2,1.1,0.4,1.4,0.9l0.1,0.1c0.1,0.1,0.1,0.2,2.7,4.9c1.5,2.8,3.3,6.1,4.8,8.8l0.3,0.5    c0.2,0.3,0.4,0.7,0.6,1c0.1,0.1,0.2,0.1,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2V22.3c0-0.1,0.1-0.2,0.2-0.2h1.6    C147.3,22.1,147.4,22.1,147.4,22.2z"></path>
+		<path class="st12" d="M151.1,44.2V22.1c0,0,0.1,0,0.2,0c0.1,0,1.9,0,1.9,0v22.1c0,0-0.1,0-0.2,0C152.8,44.2,151.1,44.2,151.1,44.2    z"></path>
+		<path class="st12" d="M169.9,22.2c0,0,0.1,0.1,0.1,0.2v21.4c0,0.1-0.1,0.2-0.2,0.2l-0.6,0.2c-0.1,0-0.2,0-0.3,0    c-0.6,0-0.9-0.5-1.1-0.9c0,0,0-0.1-0.1-0.1c-0.1-0.1-0.1-0.2-2.7-4.9c-1.5-2.7-3.3-6.1-4.8-8.8l-0.2-0.4l-0.6-1    c-0.1-0.1-0.2-0.1-0.3-0.1c-0.1,0-0.2,0.1-0.2,0.2v15.8c0,0.1-0.1,0.2-0.2,0.2h-1.6c-0.1,0-0.2-0.1-0.2-0.2V22.5    c0-0.1,0.1-0.2,0.2-0.2l0.6-0.2c0.8-0.2,1.1,0.4,1.4,0.9l0.1,0.1c0.1,0.1,0.1,0.2,2.7,4.9c1.5,2.8,3.3,6.1,4.8,8.8l0.3,0.5    c0.2,0.3,0.4,0.7,0.6,1c0.1,0.1,0.2,0.1,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2V22.3c0-0.1,0.1-0.2,0.2-0.2h1.6    C169.8,22.1,169.8,22.1,169.9,22.2z"></path>
+		<path class="st12" d="M187.3,33.1c0,0.6-0.1,2.1-0.1,2.1c-0.5,5.7-2.9,9-7,9c-1.7,0-3.3-0.7-4.5-1.9c-1.9-1.9-3-5.4-3-9.2    c0.1-5.3,2.1-11,7.6-11c3.4,0,5.8,2.1,6.4,5.8c0,0.1,0,0.2-0.1,0.2c0,0.1-0.1,0.1-0.2,0.1l-1.5,0.2c-0.2,0-0.3-0.1-0.3-0.2    c-0.5-2.7-1.9-4-4.3-4c-1.8,0-3.2,0.9-4.2,2.7c-0.8,1.6-1.3,3.8-1.3,6.2c0,2.5,0.6,5.9,2.4,7.7c0.8,0.8,1.9,1.3,3,1.3    c3.4,0,4.5-3.6,4.8-6.6c0-0.1,0-0.2-0.1-0.2c-0.1-0.1-0.1-0.1-0.2-0.1H180c-0.2,0-0.3-0.1-0.3-0.3v-1.5c0-0.2,0.1-0.3,0.3-0.3    L187.3,33.1L187.3,33.1L187.3,33.1z"></path>
+	</g>
+</g>
+</svg>
+</header>
+
+<!-- SIDEBAR NAV -->
+<div class="page-body">
+<nav class="sidenav">
+  <div class="nav-brand">Awakening Bodywork<br>for Women — Copy Deck</div>
+  <div class="nav-label">Core Pages</div>
+  <a href="#home">Home</a>
+  <a href="#about">About Stephanie</a>
+  <a href="#book">Book a Session</a>
+  <div class="nav-label">Service Pages</div>
+  <a href="#bodywork">Integrative Bodywork</a>
+  <a href="#wombcare">Womb Care</a>
+  <a href="#breast">Breast Massage</a>
+  <a href="#csection">C-Section Scar Healing</a>
+  <div class="nav-label">Programs + Community</div>
+  <a href="#serpents">Sensual Serpents</a>
+  <a href="#mentoring">1:1 Mentoring</a>
+  <a href="#gather">Gather — Workshops</a>
+</nav>
+
+<!-- MAIN -->
+<div class="main">
+
+  <!-- COVER -->
+  <div class="cover">
+    <div class="eyebrow">Founding Mothers Media · Unfurl Project · Working Document</div>
+    <h1>Awakening Bodywork<br><em>for Women</em><br>Full Website Copy</h1>
+    <p class="sub">10 pages · Written in Stephanie Hupp's voice · SEO-optimized · March 2026</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><strong>Client</strong>Stephanie Hupp</div>
+      <div class="cover-meta-item"><strong>Domain</strong>awakeningbodyworkforwomen.com</div>
+      <div class="cover-meta-item"><strong>Location</strong>Cary, NC</div>
+      <div class="cover-meta-item"><strong>Platform</strong>Drag-and-drop builder (TBD)</div>
+      <div class="cover-meta-item"><strong>Booking</strong>Acuity Scheduling</div>
+      <div class="cover-meta-item"><strong>Email</strong>MailChimp</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ HOME ═══════════════════════════════ -->
+  <div id="home" class="page-section">
+    <div class="page-header">
+      <div class="page-number">Page 01</div>
+      <div class="page-name">Homepage</div>
+      <div class="page-url">/</div>
+      <div class="meta-box">
+        <div class="meta-label">Meta Title</div>
+        <div class="meta-value">Women's Massage Therapy & Womb Healing | Cary, NC | Awakening Bodywork</div>
+        <div class="meta-label">Meta Description</div>
+        <div class="meta-value">Trauma-informed bodywork, womb healing, breast massage, and ceremonial touch for women in Cary, NC. Serving the greater Triangle area. Book with Stephanie Hupp.</div>
+        <div class="meta-label">Primary Keyword</div>
+        <div class="meta-value">women's massage therapy Cary NC · womb healing Cary NC</div>
+      </div>
+    </div>
+
+    <!-- HERO -->
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h1">H1</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Your body has been carrying this long enough.</div>
+      <div class="note-box"><strong>Design note:</strong> H1 is the emotional hook. The SEO keyword phrase lives in the subhead immediately below. Both must be visible above the fold.</div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Womb healing, therapeutic bodywork, and ceremonial touch for women in Cary, NC — with Stephanie Hupp.</div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA Button</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">Book a Session &nbsp;·&nbsp; See What's Possible</div>
+      <div class="note-box">Two CTAs: primary (book) and softer secondary for women who aren't ready to commit yet.</div>
+    </div>
+
+    <!-- INTRO SECTION -->
+    <hr class="divider">
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">The Whole Feminine.</div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>The female body is not a collection of symptoms to manage.</p>
+        <p>She is a living, breathing, deeply intelligent system — one that holds your history, your grief, your power, and your unspoken longings in its very tissue.</p>
+        <p>This work begins where Western medicine often ends.</p>
+        <p>Whether you are navigating fertility challenges after conventional treatments have failed, recovering from a cesarean or pelvic surgery, living with pain you've been told is "normal," or simply feeling called to return to yourself — you have arrived in the right place.</p>
+        <p>At Awakening Bodywork for Women, every session is ceremonial in nature. Every touch is intentional. Every woman who comes through the door is met with deep presence, skill, and care.</p>
+      </div>
+    </div>
+
+    <!-- SERVICES OVERVIEW -->
+    <hr class="divider">
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">How we work together.</div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Service Tiles</span><span class="copy-tag note">6 tiles linking to service pages</span><div class="copy-rule"></div></div>
+      <div class="services-preview">
+        <div class="service-tile">
+          <div class="service-tile-name">Integrative Bodywork</div>
+          <div class="service-tile-copy">A full-body session that moves where your body needs to go. Not a routine — a response.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-name">Womb Care</div>
+          <div class="service-tile-copy">For fertility, pelvic pain, postpartum recovery, and every season of your reproductive life.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-name">Breast Massage</div>
+          <div class="service-tile-copy">Lymphatic care, emotional release, and a return to your body's most tender terrain.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-name">C-Section Scar Healing</div>
+          <div class="service-tile-copy">Scar tissue holds memory. This work releases it — physically, emotionally, fully.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-name">Sensual Serpents</div>
+          <div class="service-tile-copy">A seven-week chakra journey for women ready to awaken, shed, and come home to themselves.</div>
+        </div>
+        <div class="service-tile">
+          <div class="service-tile-name">Gather — Workshops</div>
+          <div class="service-tile-copy">Community gatherings for the feminine body. Open. Nourishing. Real.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ABOUT TEASER -->
+    <hr class="divider">
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">The woman behind the work.</div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Stephanie Hupp is a trauma-informed women's bodywork practitioner, Arvigo Maya Abdominal Therapy practitioner, and Sensual Serpents facilitator based in Cary, NC.</p>
+        <p>She has spent years in devoted study of the feminine body — and in her own deep healing. She meets every woman she works with in full presence, with skill earned through practice and the understanding that this work is sacred.</p>
+      </div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA Link</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">→ Meet Stephanie</div>
+    </div>
+
+    <!-- SENSUAL SERPENTS TEASER -->
+    <hr class="divider">
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Are you ready to come home to your body?</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>The serpent came to Stephanie in a dream at the gateway of her fiftieth year. She answered the call. Now she is ready to guide you through yours.</p>
+        <p>Sensual Serpents is a seven-week embodiment journey through the chakras — for women ready to shed, awaken, and return home to themselves.</p>
+      </div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA Link</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">→ Learn About Sensual Serpents</div>
+    </div>
+
+    <!-- NEWSLETTER -->
+    <hr class="divider">
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Stay close.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Letters arrive when something wants to be said — not on a schedule, but when the body moves me to write. Each one is a devotional. A piece of the practice.</p>
+        <p>You are welcome here.</p>
+      </div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA Button</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">Join the Circle</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+  <div id="about" class="page-section">
+    <div class="page-header">
+      <div class="page-number">Page 02</div>
+      <div class="page-name">About Stephanie</div>
+      <div class="page-url">/about</div>
+      <div class="meta-box">
+        <div class="meta-label">Meta Title</div>
+        <div class="meta-value">Stephanie Hupp | Trauma-Informed Women's Bodywork Practitioner | Cary, NC</div>
+        <div class="meta-label">Meta Description</div>
+        <div class="meta-value">Stephanie Hupp is a trauma-informed bodywork practitioner, Arvigo Maya Abdominal Therapy practitioner, and Sensual Serpents facilitator serving women in Cary, NC and the greater Triangle area.</div>
+        <div class="meta-label">Primary Keyword</div>
+        <div class="meta-value">trauma-informed massage therapist Cary NC · women's bodywork Cary NC</div>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h1">H1</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Stephanie Hupp</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Women's Bodywork Practitioner · Arvigo Maya Abdominal Therapy · Sensual Serpents Facilitator · Cary, NC</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">I have been a woman who ignored her body.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body — Her Story</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Who pushed through the pain, the grief, the seasons of herself. I know what it is to live from the neck up — to treat the body as transportation rather than teacher.</p>
+        <p>I also know what it is to finally surrender into the body's intelligence. To discover that everything I had been carrying — physically, emotionally, ancestrally — could soften. Could be witnessed. Could heal.</p>
+        <p>As I approached my fiftieth year, something in me cracked open. The Serpent came to me in dreams, again and again, each time with a message. She was calling me deeper — into devotion, into shedding, into the truth of my feminine essence.</p>
+        <p>I answered without hesitation.</p>
+        <p>That threshold changed everything.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">The work I do.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>I work with the whole feminine — the body, the womb, the breasts, the nervous system, the emotional body, and the ancestral lineage that lives in the tissue.</p>
+        <p>Sessions are not routine. I scan energy, listen to the body's story, and move intuitively — following tangles, connections, and the places where stuck energy has been waiting to flow. This is not a menu of modalities. It is a living practice, adapted in real time to the woman in front of me.</p>
+        <p>My approach is rooted in the principles of Arvigo Maya Abdominal Therapy, trauma-informed bodywork, energetic hygiene, and shamanic healing. I draw from cupping, gua sha, castor oil therapy, breast massage, breathwork, and energy work — not as techniques, but as tools of a sacred practice.</p>
+        <p>I have held women through failed IVF. Through active miscarriage. Through the grief of a birth they never got to complete emotionally. Through the terror of a lump discovered. Through years of pain they had been told was normal.</p>
+        <p>None of it is normal. And none of it has to be permanent.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">What it's like to work together.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>When you arrive, you are met as you are.</p>
+        <p>Sessions begin with smudging, grounding, and medicine music — creating a sacred container for what is about to unfold. We move slowly. Nothing is forced. The nervous system must feel safe before the deeper layers can open.</p>
+        <p>You may cry. You may experience a release you didn't know was waiting. You may feel — finally, after years of holding — truly held.</p>
+        <p>I move through the body as it speaks to me — never in a fixed sequence, always in response. Sometimes what needs attention is the abdomen. Sometimes the heart. Sometimes the places the body has been protecting for so long she's forgotten why.</p>
+        <p>My work is not a quick fix. It is an invitation into a healing relationship with your own body. The women who stay with this process discover that the body's capacity to heal is far greater than they were ever told.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Who this is for.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>This work is for the woman who is ready to go deep.</p>
+        <p>The one who has exhausted conventional options and feels in her bones that there is another way. The one who is surrendered — not resigned, but genuinely open to what she does not yet understand. The one who is willing to feel what her body has been carrying.</p>
+        <p>This is not for the woman looking for a quick fix, or who needs to be convinced. It is for the woman who already knows.</p>
+        <p>If that is you — welcome. I have been waiting for you.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Training + Lineage</div>
+      <div class="note-box" style="margin-top:8px;"><strong>Design note:</strong> This section can be presented as a clean list or credential block for credibility/SEO. Cary, NC must appear here explicitly.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">
+        <p>Licensed Massage Therapist<br>
+        Arvigo Maya Abdominal Therapy Practitioner<br>
+        Sensual Serpents Certified Facilitator — Deva Wild Lineage<br>
+        Trauma-Informed Bodywork Practice<br>
+        Continuing study in energetic hygiene, shamanic healing, and women's embodiment</p>
+        <p>Studio located in Cary, NC · Serving the greater Triangle area including Raleigh, Apex, Morrisville, and Holly Springs.</p>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">→ Book a Session with Stephanie</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ BODYWORK ═══════════════════════════════ -->
+  <div id="bodywork" class="page-section">
+    <div class="page-header">
+      <div class="page-number">Page 03</div>
+      <div class="page-name">Integrative Bodywork</div>
+      <div class="page-url">/bodywork</div>
+      <div class="meta-box">
+        <div class="meta-label">Meta Title</div>
+        <div class="meta-value">Integrative Massage Therapy for Women | Cary, NC | Awakening Bodywork</div>
+        <div class="meta-label">Meta Description</div>
+        <div class="meta-value">Ceremonial, trauma-informed bodywork sessions for women in Cary, NC. Integrating abdominal massage, cupping, gua sha, energy work, and breathwork — guided by what your body needs today.</div>
+        <div class="meta-label">Primary Keyword</div>
+        <div class="meta-value">massage therapy Cary NC · integrative massage women Cary NC</div>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h1">H1</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Integrative Massage Therapy for Women — Cary, NC</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">A session that moves where your body needs to go.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Opening</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>This is not a standard massage.</p>
+        <p>From the moment you arrive, the session is already reading you — your breath, your energy, the places where the body is bracing. Every session is unique, because every body is different, and because you are not the same woman you were the last time you were on this table.</p>
+        <p>What unfolds is a response — intuitive, skilled, and fully present — to what your body is calling for today.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">The session.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Sessions open with smudging, grounding, and medicine music. This is the container — the sacred space that allows the nervous system to soften and the deeper layers to begin to open. We move slowly. Nothing is rushed or forced.</p>
+        <p>From there, the work follows the body.</p>
+        <p>Sessions draw from a full range of therapeutic tools: abdominal massage, deep tissue work, cupping, gua sha, castor oil therapy, energy work, and breathwork. These are not techniques applied in sequence. They are a language — spoken in response to what the body reveals, and drawn from intuitively as the session unfolds.</p>
+        <p>Sessions are typically two hours or longer. This is not accidental. The body needs time to trust before she opens. Rushing is antithetical to this work.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">What this work supports.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Integrative bodywork is beneficial for women at every stage of life. This work can support:</p>
+        <p>Chronic tension, muscular holding, and deep tissue restriction — Stress, anxiety, and nervous system dysregulation — Digestive imbalances and pelvic congestion — Emotional holding, grief stored in the body, and the weight of unprocessed experience — Disconnection from the physical self — And the deep rest that every woman deserves, and almost none of us permit ourselves to receive.</p>
+      </div>
+      <div class="note-box"><strong>Voice note:</strong> The list above runs as prose with em dashes. Do not convert to bullet points — it flattens her voice. If a list is needed for design, use the same words as a styled list.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Session details.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Details Block</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">
+        <p>Duration: 2+ hours<br>
+        Investment: $250<br>
+        Location: Cary, NC (studio address shared upon booking)<br>
+        Booking: Online via Acuity</p>
+        <p>Womb care, breast massage, and C-section scar healing can be incorporated into integrative sessions. → Learn about specialty offerings</p>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA</span><div class="copy-rule"></div></div>
+      <div class="copy-text">If you feel called to this work, I'd love to hold space for you. → Book a Session</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ WOMB CARE ═══════════════════════════════ -->
+  <div id="wombcare" class="page-section">
+    <div class="page-header">
+      <div class="page-number">Page 04</div>
+      <div class="page-name">Womb Care</div>
+      <div class="page-url">/womb-care</div>
+      <div class="meta-box">
+        <div class="meta-label">Meta Title</div>
+        <div class="meta-value">Womb Healing & Arvigo Maya Abdominal Therapy | Cary, NC | Awakening Bodywork</div>
+        <div class="meta-label">Meta Description</div>
+        <div class="meta-value">Womb care for fertility, pelvic pain, postpartum recovery, menstrual imbalances, and menopause. Arvigo Maya Abdominal Therapy in Cary, NC with Stephanie Hupp.</div>
+        <div class="meta-label">Primary Keywords</div>
+        <div class="meta-value">womb healing Cary NC · Arvigo Maya abdominal therapy Cary NC · fertility massage Cary NC</div>
+        <div class="meta-label">SEO Note</div>
+        <div class="meta-value">Sub-sections each have their own H2 to capture specific condition searches: PCOS, endometriosis, fibroids, painful periods, pelvic pain, infertility, menopause, postpartum.</div>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h1">H1</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Womb Healing & Arvigo Maya Abdominal Therapy — Cary, NC</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">For every woman, in every season of her reproductive life.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Opening</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>The womb is the center.</p>
+        <p>She holds your fertility, your menstrual intelligence, your postpartum memory, your ancestral history, and the emotional residue of every experience the body hasn't yet had space to process. When she is out of alignment — congested, restricted, held in patterns passed down through the maternal lineage — the effects ripple through the entire body.</p>
+        <p>This work begins with deep listening.</p>
+        <p>The abdominal and pelvic space is approached with reverence, skill, and full presence. Using Arvigo Maya Abdominal Therapy as a foundation, sessions address the physical structures of the reproductive and digestive systems — and the energetic and emotional holding they carry.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SUB-SECTION: FERTILITY -->
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><span class="copy-tag seo">SEO: fertility massage Cary NC · pre-conception support NC</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Fertility + Pre-Conception Support</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Your body knows how to conceive. Sometimes she needs support — physically, hormonally, energetically — to remember.</p>
+        <p>Womb care for fertility addresses circulation, uterine positioning, hormonal regulation, and the nervous system's capacity for receptivity. Stephanie has held women through failed IVF cycles, the grief of irregular or absent periods, and the tender complexity of active miscarriage — meeting each in the full reality of her journey.</p>
+        <p>This work does not replace medical care. It works alongside it — and reaches the places clinical treatment cannot.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SUB-SECTION: MENSTRUAL -->
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><span class="copy-tag seo">SEO: painful periods massage Cary · PCOS pelvic pain NC</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Menstrual Cycle Imbalances</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Painful periods are not normal. They are information.</p>
+        <p>PCOS, endometriosis, fibroids, irregular cycles, PMS, and cycle loss — these are the body's way of asking to be heard. Womb care meets these conditions with skilled, compassionate, consistent touch — alongside education in menstrual cycle awareness and self-care practices you can take home and tend to yourself.</p>
+        <p>You do not have to live with this pain. You do not have to manage it. You can listen to what it is trying to tell you — and begin to heal.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SUB-SECTION: POSTPARTUM -->
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><span class="copy-tag seo">SEO: postpartum massage Cary NC · postpartum womb healing NC</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Postpartum Recovery + Womb Restoration</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>The postpartum body is a body in profound transition.</p>
+        <p>Whether you birthed vaginally or by cesarean, the abdominal and pelvic landscape has undergone a seismic shift. Organs that moved aside to grow a life are finding their way back. Fascial lines are altered. Scar tissue forms. And underneath all of it, the emotional body is processing an experience that words rarely capture — and that modern motherhood rarely creates space to complete.</p>
+        <p>Postpartum womb care supports the physical restoration of the abdominal and pelvic space — and creates the container for whatever your birth still needs to say.</p>
+      </div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">Internal Link</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">→ Learn about C-Section Scar Healing</div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- SUB-SECTION: MENOPAUSE -->
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><span class="copy-tag seo">SEO: menopause massage therapy Cary NC · perimenopause bodywork NC</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Menopause + Perimenopause Care</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>The menopausal transition is not a loss. It is an initiation.</p>
+        <p>But the body can struggle — with heat, with disrupted sleep, with the hormonal cascades that feel uncontrollable, with the grief of a life chapter closing and the uncertainty of what comes next. Womb care through menopause supports circulation, lymphatic flow, and the emotional processing of a profound passage.</p>
+        <p>Many women find that tending the wombspace through this transition — even after the menses have ceased — brings a quality of integration and peace that nothing else has offered.</p>
+        <p>This is the initiation she deserves to be held through.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">What sessions include.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Details</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">
+        <p>Womb care sessions draw from Arvigo Maya Abdominal Therapy, castor oil therapy, cupping, breathwork, and energetic work. Education in menstrual cycle awareness and self-care practices is woven into each session as appropriate.</p>
+        <p>Duration: 2+ hours · Investment: Please reach out to discuss your needs and intentions.<br>Location: Cary, NC</p>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA</span><div class="copy-rule"></div></div>
+      <div class="copy-text">If your body has been calling you toward this work — listen. → Book a Womb Care Session</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ BREAST MASSAGE ═══════════════════════════════ -->
+  <div id="breast" class="page-section">
+    <div class="page-header">
+      <div class="page-number">Page 05</div>
+      <div class="page-name">Breast Massage Therapy <span class="badge badge-seo">SEO Goldmine</span></div>
+      <div class="page-url">/breast-massage</div>
+      <div class="meta-box">
+        <div class="meta-label">Meta Title</div>
+        <div class="meta-value">Breast Massage Therapy for Women | Lymphatic + Emotional Care | Cary, NC</div>
+        <div class="meta-label">Meta Description</div>
+        <div class="meta-value">Lymphatic breast massage and heart-tending bodywork for women in Cary, NC. Supports emotional release, breast health, and deep reconnection with the body.</div>
+        <div class="meta-label">Primary Keywords</div>
+        <div class="meta-value">breast massage therapy women Cary NC · lymphatic breast massage NC</div>
+        <div class="meta-label">SEO Note</div>
+        <div class="meta-value">Near-zero competition in Cary. Unique page — do not bury as a section inside another page.</div>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h1">H1</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Breast Massage Therapy for Women — Cary, NC</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Lymphatic care, emotional release, and a return to your body's most tender terrain.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Opening — draw from newsletter</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>To tend the breasts is to meet yourself fully.</p>
+        <div class="anaphora">
+          To hold yourself fully.<br>
+          To feel yourself fully.<br>
+          To witness yourself fully —<br>
+          to feel deeply into the heart's story.
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Your breasts hold stories.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Stories of objectification and pride, of feeding and loss, of fear and longing, of love unexpressed and tenderness withheld. These stories, buried deeply within the breast tissue, can be accessed when we hold the breasts with reverence and presence.</p>
+        <div class="anaphora">
+          Creating space to feel it all.<br>
+          To witness what lives in the tissue.<br>
+          To soften what has been held.<br>
+          To allow pain to transmute into beauty<br>through breath, touch, and care.
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">The body's flowing river.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body — with clinical anchor</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>The lymphatic system is often called the body's flowing river — carrying fluid, waste, and stagnation, while also mirroring the watery landscape of our emotions.</p>
+        <p>When lymph is supported and flowing, tissue can soften, congestion can ease, and energy can move more freely through the heart space. Lymphatic breast massage supports the processing of emotions, reduces pain and stagnation, and brings hydration and vitality to the breast tissue.</p>
+        <p>As we deepen the breath, we create safety.</p>
+        <div class="anaphora">
+          Safety to feel.<br>
+          Safety to witness what has been held.<br>
+          Safety to soften, open, and belong fully in the body.
+        </div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">How this work is held.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Breast massage and heart-tending bodywork can be added to any bodywork session. Sessions may also include cupping, when appropriate, and a warm castor oil pack to support the softening of scar tissue and adhesions, reduce inflammation, and relieve congestion in the breast tissue.</p>
+        <p>Holding this space is an honor. Opening your heart and allowing yourself to be held — surrendering into the chambers of your heart — is incredibly vulnerable and brave. I deeply honor your yes to this deeper work.</p>
+        <p>Education and techniques for self-breast massage are also offered, so you can continue tending this sacred terrain at home.</p>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA</span><div class="copy-rule"></div></div>
+      <div class="copy-text">If you feel called, let's talk about how we can care for your beautiful breasts together. → Book a Session</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ C-SECTION ═══════════════════════════════ -->
+  <div id="csection" class="page-section">
+    <div class="page-header">
+      <div class="page-number">Page 06</div>
+      <div class="page-name">C-Section Scar Healing <span class="badge badge-seo">SEO Goldmine</span></div>
+      <div class="page-url">/csection-scar-healing</div>
+      <div class="meta-box">
+        <div class="meta-label">Meta Title</div>
+        <div class="meta-value">C-Section Scar Massage & Healing | Cary, NC | Awakening Bodywork</div>
+        <div class="meta-label">Meta Description</div>
+        <div class="meta-value">Specialized C-section scar tissue massage in Cary, NC. Addressing adhesions, pelvic pain, numbness, and the emotional completion your birth deserves.</div>
+        <div class="meta-label">Primary Keywords</div>
+        <div class="meta-value">C-section scar massage Cary NC · C-section scar healing massage Raleigh NC</div>
+        <div class="meta-label">SEO Note</div>
+        <div class="meta-value">Near-zero competition for this term in Cary. Extremely high search intent. Must be a standalone page.</div>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h1">H1</span><div class="copy-rule"></div></div>
+      <div class="copy-text">C-Section Scar Massage & Healing — Cary, NC</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Scar tissue holds memory. This work releases it.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Opening</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>You may not think about your cesarean scar very often. It is a thin white line — easily covered, easily forgotten.</p>
+        <p>But the body has not forgotten.</p>
+        <p>Scar tissue extends far deeper than the skin. A C-section involves multiple layers — the skin, the fascia, the muscles, the uterus itself — and the adhesions that form as each layer heals can create effects that ripple through the entire abdominal and pelvic region: numbness, pulling sensations, pain during intimacy, digestive disruption, core disconnection, a shelf of tissue that won't respond to anything you try, and a persistent sense of being cut off from your own lower body that many women describe but almost none have been offered help with.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">The emotional body holds this scar too.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>For some women, a cesarean birth was a life-saving intervention. For others, it was unexpected, or unwanted, or filled with fear they never had space to fully feel. Many women are given permission to recover physically — and no permission at all to process the birth they actually had.</p>
+        <p>The tissue holds what the mind hasn't yet completed. This work creates the space for both.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">What the work does.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>C-section scar work is a gentle, skilled process of releasing the adhesion and restriction that forms in scar tissue across multiple tissue layers. Using manual therapy, myofascial release, and castor oil treatment, this work:</p>
+        <p>Reduces tightness and restricted movement in the abdominal wall — Addresses the numbness or hypersensitivity at and around the scar itself — Supports pelvic floor function and core reconnection — Restores circulation and lymphatic flow to the area — And creates space for the emotional completion the birth may not have had room for.</p>
+      </div>
+      <div class="note-box"><strong>Voice note:</strong> List runs as prose with em dashes per voice guidelines. Convert only if absolutely required for design.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">It is never too late.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>This work is appropriate for C-sections of any age — whether your birth was six months ago or twenty years. The tissue responds. It does not have a shelf life.</p>
+        <p>This work is for the woman who feels disconnected from her lower belly long after her birth. Who experiences pulling, tightness, or pain at or around the scar. Who has a shelf of tissue that hasn't changed with anything she's tried. Who wonders if her cesarean is connected to pelvic pain, bladder urgency, or her difficulty reconnecting with her core. Who is ready to complete the story her body has been holding.</p>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Your birth deserves to be fully honored. So does your healing. → Book a Session</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ SENSUAL SERPENTS ═══════════════════════════════ -->
+  <div id="serpents" class="page-section">
+    <div class="page-header">
+      <div class="page-number">Page 07</div>
+      <div class="page-name">Sensual Serpents</div>
+      <div class="page-url">/sensual-serpents</div>
+      <div class="meta-box">
+        <div class="meta-label">Meta Title</div>
+        <div class="meta-value">Sensual Serpents — Seven-Week Chakra Journey for Women | Cary, NC</div>
+        <div class="meta-label">Meta Description</div>
+        <div class="meta-value">A sacred seven-week embodiment journey through the chakras. Dance, breathwork, ritual, and feminine temple arts for women in Cary, NC and the Triangle area.</div>
+        <div class="meta-label">Primary Keywords</div>
+        <div class="meta-value">chakra healing bodywork NC · energy healing women Cary NC · Sensual Serpents chakra journey NC</div>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h1">H1</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Sensual Serpents</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Movement as prayer. Breath as devotion. The body as altar.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Opening — mythic</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>The serpent came to me in a dream at the gateway of my fiftieth year.</p>
+        <p>She visited many times, each time with a message. I knew I was being called — called into deeper devotion, deeper shedding, deeper surrender. Called deeper into myself. It felt divinely aligned, this invitation to walk with the serpentine energy, as if she had been waiting for me at the gateway of this new era of my life.</p>
+        <p>I answered without hesitation.</p>
+        <p>Eight months later — having walked through the most profound initiation of my womanhood — I emerged changed. I said yes to shedding what no longer belonged to me. I allowed myself to be seen in my fullness. And I came home.</p>
+        <p>Now I am ready to guide you through yours.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">What is Sensual Serpents?</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Sensual Serpents is a temple path of embodied alchemy.</p>
+        <p>A sacred initiation where the chakras become gateways for healing, remembrance, and liberation. Through dance, breath, sound, and ritual, the serpent of Shakti awakens within — shedding layers of fear and distortion to reveal power, pleasure, love, and truth.</p>
+        <p>This is a personal journey of deep embodiment, guiding women to become priestesses of the body, alchemists of the soul, and radiant vessels of living wisdom.</p>
+        <p>It is both trauma-informed and deeply rooted in devotion — meeting you with truth, tenderness, and courage.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">The seven-week journey.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Across seven weeks, we move through the chakras as portals — from root to crown. Each week holds its own element, its own medicine, its own invitation to shed and awaken.</p>
+        <p>Each gathering draws from somatic therapy, shamanic ritual, yogic breathwork, feminine temple arts, and embodied dance — woven into a ceremonial container held with care and presence.</p>
+        <p>Between gatherings: preparatory emails with educational content, shared playlists, integration practices, and a WhatsApp community for ongoing support and sisterhood.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">What women find through this journey.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>A deeper connection to the body, intuition, and inner wisdom — Nervous system regulation, grounding, and emotional release — Reclaiming sensuality, creativity, pleasure, and confidence — Activation of life force energy and feminine power — Feeling safer, clearer, and more centered in daily life — A sense of belonging, sisterhood, and being truly witnessed — A full-body reset that restores vitality, softness, and strength — Liberation from old patterns and stories stored in the chakras — A return to joy, presence, authenticity, and love of self.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Who this is for.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Sensual Serpents is for the woman who feels the pull.</p>
+        <p>Who is ready to reconnect with her body — not as an object to manage, but as a living altar of wisdom. Who is willing to move, to feel, to be seen. Who knows, somewhere in her body, that she has been waiting for this.</p>
+        <p>You do not need to know how to dance. You do not need to have any prior spiritual practice. You need only to be willing — to arrive, to feel, to begin.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Format + Details</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Details Block</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">
+        <p>Small group · 5–10 women<br>
+        Seven weekly gatherings · 2 hours per session<br>
+        Sacred space in the Cary, NC area (location shared with registered participants)<br>
+        Sensual Serpents runs in quarterly containers</p>
+        <p>Join the newsletter to be the first to know when the next journey opens — and to receive Stephanie's devotional letters in the meantime.</p>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTAs</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Are you ready to come home to your body? → Join the Newsletter &nbsp;·&nbsp; → Book a Discovery Call</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ MENTORING ═══════════════════════════════ -->
+  <div id="mentoring" class="page-section">
+    <div class="page-header">
+      <div class="page-number">Page 08</div>
+      <div class="page-name">1:1 Mentoring <span class="badge badge-new">Emerging</span></div>
+      <div class="page-url">/mentoring</div>
+      <div class="meta-box">
+        <div class="meta-label">Meta Title</div>
+        <div class="meta-value">One-on-One Women's Healing Mentoring | Cary, NC | Awakening Bodywork</div>
+        <div class="meta-label">Meta Description</div>
+        <div class="meta-value">Customized one-on-one healing mentoring for women — drawing from bodywork, menstrual cycle education, and embodiment practices. Cary, NC.</div>
+        <div class="meta-label">Note</div>
+        <div class="meta-value">Launch as a simple page now. Flesh out once the offering is fully structured. This is enough to hold the space and capture search interest.</div>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h1">H1</span><div class="copy-rule"></div></div>
+      <div class="copy-text">1:1 Mentoring — Customized Healing Journeys</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">For the woman ready to walk her own path — with a guide beside her.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>Some women need more than a session. They need a guide.</p>
+        <p>One-on-one mentoring is a customized, ongoing healing relationship — drawing from bodywork, menstrual cycle education, embodiment practices, and deep listening to meet you exactly where you are.</p>
+        <p>This is not a program with predetermined steps. It is a living practice, shaped entirely around your body, your history, your intentions, and what is ready to move.</p>
+        <p>Recent work has included a two-hour menstrual cycle education session for a woman whose period had stopped — exploring cyclical living and the body's language. Ongoing support for women navigating fertility, postpartum transitions, and hormonal shifts. Embodiment practice for women returning to their bodies after long disconnection or trauma.</p>
+        <p>Every journey is different. Every woman deserves a container that honors that.</p>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Details</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">Investment: ~$250–300 per session · Reach out to discuss your needs and intentions.</div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA</span><div class="copy-rule"></div></div>
+      <div class="copy-text">If you feel called to walk this path together — let's begin. → Reach Out</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ GATHER ═══════════════════════════════ -->
+  <div id="gather" class="page-section">
+    <div class="page-header">
+      <div class="page-number">Page 09</div>
+      <div class="page-name">Gather — Workshops + Community</div>
+      <div class="page-url">/gather</div>
+      <div class="meta-box">
+        <div class="meta-label">Meta Title</div>
+        <div class="meta-value">Women's Wellness Workshops & Community | Cary, NC | Awakening Bodywork</div>
+        <div class="meta-label">Meta Description</div>
+        <div class="meta-value">Community gatherings, womb healing workshops, and women's wellness events in Cary, NC. Nurturing the Womb, yoni steaming, and more — open to all women.</div>
+        <div class="meta-label">Primary Keywords</div>
+        <div class="meta-value">women's wellness workshop Cary NC · womb healing class Raleigh NC</div>
+        <div class="meta-label">SEO Note</div>
+        <div class="meta-value">Living page — evergreen intro stays permanent. Event listings below rotate and each one gets indexed as a new SEO signal. List upcoming events with dates even when sparse.</div>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h1">H1</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Gather</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Women's Wellness Workshops + Community — Cary, NC</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Opening — evergreen</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>There is something that happens when women gather with intention.</p>
+        <p>A softening. A recognition. A permission to be fully present in the body — not performing, not managing, not holding it all together. Just here. In this.</p>
+        <p>These gatherings are created for that. For the woman who is curious about this work, or craving connection, or ready to learn practices she can take home and tend to herself.</p>
+        <p>All women are welcome. Come as you are.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Nurturing the Womb</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Workshop Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">A guided self-care womb massage practice — for every woman, at every stage of womanhood.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>You will be bathed in love and compassion and held in deep resonance — allowing you to open and drop fully into the potency of tending your wombspace.</p>
+        <p>Through breathwork, meditation, and the skillful teaching of self-abdominal massage, you will learn to place your own hands on your belly and breathe compassion to the womb. You become your own medicine. And you begin to awaken into your innate womb wisdom.</p>
+        <p>This practice supports every woman — at every age, every stage, whether you are still bleeding or not, and regardless of whether your uterus is present in your physical body.</p>
+        <p>This practice can support: pre-conception preparation and fertility awareness — menstrual cycle imbalances (painful or irregular periods, PCOS) — postpartum and abdominal surgery recovery — pelvic pain, congestion, or prolapse — menopause transitions — digestive imbalances and chronic pelvic pain — emotional and spiritual healing.</p>
+        <p>You will receive a bottle of sacred moon oil and educational materials to take home.</p>
+        <p>Come as you are. This workshop is an invitation to return to your body, honor your womb, and receive the nourishment you deserve.</p>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">More offerings.</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Upcoming / Rotating</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">
+        <p>Additional workshops and gatherings are offered throughout the year, including:</p>
+        <p>Yoni Steaming Education + Experience — Self-Breast Massage Instruction — Menstrual Cycle Awareness — Internal Pelvic Work (Yoni Eggs + Wands)</p>
+        <p>Join the newsletter to be the first to know when new gatherings are announced.</p>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTAs</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">→ Join the Newsletter &nbsp;·&nbsp; → View Upcoming Events</div>
+    </div>
+  </div>
+
+
+  <!-- ═══════════════════════════════ BOOK ═══════════════════════════════ -->
+  <div id="book" class="page-section">
+    <div class="page-header">
+      <div class="page-number">Page 10</div>
+      <div class="page-name">Book a Session</div>
+      <div class="page-url">/book</div>
+      <div class="meta-box">
+        <div class="meta-label">Meta Title</div>
+        <div class="meta-value">Book a Session | Awakening Bodywork for Women | Cary, NC</div>
+        <div class="meta-label">Meta Description</div>
+        <div class="meta-value">Book your women's bodywork session with Stephanie Hupp in Cary, NC. Online scheduling via Acuity. New clients warmly welcome.</div>
+        <div class="meta-label">Primary Keywords</div>
+        <div class="meta-value">book massage therapy Cary NC · schedule women's massage Cary NC</div>
+        <div class="meta-label">Design Note</div>
+        <div class="meta-value">Acuity embed appears immediately after the short intro. FAQ section below widget captures long-tail searches and answers new client hesitations.</div>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h1">H1</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Book a Session</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag sub">Subhead</span><div class="copy-rule"></div></div>
+      <div class="copy-text">You don't have to have it all figured out before you arrive. Just arrive.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Short Intro</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>If something in you has been reaching toward this work — that reaching is information worth following.</p>
+        <p>New clients are warmly welcome. Sessions are held at my studio in Cary, NC. I work with a small number of women at a time, and I approach each healing relationship with full presence, skill, and care.</p>
+      </div>
+    </div>
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag note">Design Note</span><div class="copy-rule"></div></div>
+      <div class="note-box" style="margin-top:0;"><strong>Acuity Scheduling widget embeds here.</strong> Keep surrounding white space generous — the booking experience should feel unhurried and sacred, not transactional.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><span class="copy-tag seo">SEO: long-tail + featured snippet targets</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Before you arrive.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">What can I expect from my first session?</div>
+      <div class="faq-a">Your first session begins with an unhurried intake conversation — a chance for me to understand your body's history and what you are moving through. We ease into the session from there, following what the body calls for. Nothing is rushed. You are in charge of your pace. Whatever comes up — tears, rest, release, or simply deep stillness — is welcome.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is womb care or breast massage right for me?</div>
+      <div class="faq-a">If you are a woman with a body — yes. These offerings are appropriate for women at every age and stage: actively bleeding, postpartum, perimenopausal, post-hysterectomy, or anywhere in between. If you have specific medical conditions or questions, I welcome a conversation before you book.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What does a ceremonial bodywork session feel like?</div>
+      <div class="faq-a">Sessions open with smudging, grounding, and medicine music — creating the sacred container that allows the nervous system to soften and the deeper layers to open. From there, we move intuitively. Some women experience profound emotional release. Others rest more deeply than they have in years. Most feel something they hadn't expected to feel: truly held.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">How many sessions will I need?</div>
+      <div class="faq-a">Healing is a process, not an event. For womb imbalances, postpartum recovery, or scar tissue work, most women experience meaningful shifts within three to six sessions and continue as an ongoing self-care practice. I will always support you in understanding what your body is calling for — we never create dependency, only devotion to your own healing.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Where is your studio located?</div>
+      <div class="faq-a">My studio is in Cary, NC. The full address is shared upon booking. I serve the greater Triangle area, including Raleigh, Apex, Morrisville, Holly Springs, and surrounding communities.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What is your cancellation policy?</div>
+      <div class="faq-a">Details are shared during the booking process. I ask only that you communicate — life happens, and I always aim to meet each situation with grace.</div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag h2">H2</span><div class="copy-rule"></div></div>
+      <div class="copy-text">Not ready to book yet?</div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag body">Body</span><div class="copy-rule"></div></div>
+      <div class="copy-text">
+        <p>That's okay. Stay close. Letters arrive in your inbox when something wants to be said — devotional, honest, and rooted in this work. When the time is right, you'll know.</p>
+      </div>
+    </div>
+    <div class="copy-section">
+      <div class="copy-label"><span class="copy-tag cta">CTA</span><div class="copy-rule"></div></div>
+      <div class="copy-text dm">→ Join the Circle (Newsletter)</div>
+    </div>
+  </div>
+
+</div><!-- end main -->
+</div>
+</body>
+</html>
